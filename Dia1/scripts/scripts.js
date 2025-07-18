@@ -38,5 +38,16 @@ if(booleanito2 == true){
 }
 
 
+//bucles
+for(i=0;i<4;i++){
+    console.log("Wenas todos");
+}
+
+bueno=true;
+while(bueno==true){
+    console.log("holis");
+    bueno=false
+}
+
 
 // Creado por : Monsalve Johan - C.C. 1097911956
