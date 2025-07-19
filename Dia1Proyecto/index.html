@@ -18,10 +18,10 @@
             <a href="./index2.html">Salir</a>
         </div>
 
+
         <div class="Registrar" id="Registrar">
             <button>Volver al menu</button>
             <h2>Registrar Nuevo Gasto</h2>
-
             <form action="./index.html">
                 <div class="NuevoGasto">
                     <label for="monto">Monto del Gasto $:</label>
@@ -57,7 +57,7 @@
             </form>
         </div>
 
-        
+
         <div class="verGastos" id="verGastos">
             <button>Volver al menu</button>
             <h2>Mis Gastos</h2>
@@ -77,8 +77,38 @@
                 <div>hogar</div>
                 <div>otros</div>
             </div>
+            <div class="filtroFecha" id="filtroFecha">
+                <h3>Filtrar por Rango de Fecha</h3>
+                <input type="date" id="fechaInicio">
+                <input type="date" id="fechaFin">
+                <button class="boton">Aplicar Filtro</button>
+            </div>
+            <div id="listaGastos"></div>
         </div>
 
+
+        <div class="Calcular" id="Calcular">
+            <button>Volver al menu</button>
+            <h2>Calcular Totales</h2>
+            <div>
+                <button>TotaL Diario</button>
+                <button>Total Semanal</button>
+                <button>Total Mensual</button>
+            </div>
+            <div class="resultadoCalculo"></div>
+        </div>
+
+
+        <div class="Reportes" id="Reportes">
+            <button>Volver menu</button>
+            <h2>Reportes de Gastos</h2>
+            <div>
+                <button>Reporte Diario</button>
+                <button>Reporte Semanal</button>
+                <button>Reporte Mensual</button>
+            </div>
+            <div class="resultadoReporte"></div>
+        </div>
     </div>
 
 
