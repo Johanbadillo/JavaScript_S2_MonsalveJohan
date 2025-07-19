@@ -1,12 +1,12 @@
 const menuPrincipal=`
         <h1>Opciones Disponibles</h1>
         <ul>
-            <li><strong>1.</strong> Registrar dato nuevo</li>
-            <li><strong>2.</strong> Leer datos registrado</li>
-            <li><strong>3.</strong> Leer un dato en especifico</li>
-            <li><strong>4.</strong> Actualizar dato </li>
-            <li><strong>5.</strong> Eliminar dato registrad</li>
-            <li><strong>6.</strong> Regresar al menu principal</li>
+            <li><strong>1.</strong> Registro y Gestión de Ingredientes</li>
+            <li><strong>2.</strong> Seguimiento del Historial de Ingredientes</li>
+            <li><strong>3.</strong> Registro y Gestión de Categorías</li>
+            <li><strong>4.</strong> Registro y Gestión de Chef </li>
+            <li><strong>5.</strong> Registro y Gestión de Hamburguesas</li>
+            <li><strong>6.</strong> Salir del programa</li>
         </ul>
         `;
 
@@ -108,10 +108,11 @@ function opciones() {
         menuPrincipal.classList.remove('opcion2', 'opcion3', 'opcion4', 'opcion1', 'opcion6', 'error');
         menuPrincipal.classList.add(claseCSS);
     } else if (opcion == 6) {
-        menuPrincipal.innerHTML = menuPrincipal;
-        claseCSS = 'menuPrincipal'
+
         menuPrincipal.classList.remove('opcion2', 'opcion3', 'opcion4', 'opcion5', 'opcion1','opcion6', 'error');
         resultadoDIV.innerHTML=menuPrincipal
+        resultadoDIV.innerHTML = '<h2>Regresando al menu principal...</h2>';
+        resultadoDIV.style.display = 'flex';
     }else {
         menu = `<h2>Opción no válida</h2>
         <p>Por favor, seleccione una opción entre 1 y 6.</p>`;
