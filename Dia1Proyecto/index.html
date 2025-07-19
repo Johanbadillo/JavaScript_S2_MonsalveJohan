@@ -7,7 +7,81 @@
     <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
-    
+    <div class="contenido">
+        <h1>Simulador de Gastos Diarios</h1>
+
+        <div class="menu" id="menu">
+            <button>Registrar Nuevo Gasto</button>
+            <button>Ver Gastos</button>
+            <button>Calcular Totales</button>
+            <button>Generar Reportes</button>
+            <a href="./index2.html">Salir</a>
+        </div>
+
+        <div class="Registrar" id="Registrar">
+            <button>Volver al menu</button>
+            <h2>Registrar Nuevo Gasto</h2>
+
+            <form action="./index.html">
+                <div class="NuevoGasto">
+                    <label for="monto">Monto del Gasto $:</label>
+                    <input type="number" id="monto" required>
+                </div>
+                <div class="NuevoGasto">
+                    <label for="cantidad"></label>
+                    <input type="number" id="cantidad" value="1" required>
+                </div>
+                <div class="NuevoGasto">
+                    <label for="categoria">categoria</label>
+                    <select name="" id="categoria" required>
+                        <option value="">Selecciona una categoria</option>
+                        <option value="comida">comida</option>
+                        <option value="transporte">transporte</option>
+                        <option value="entretenimiento">entretenimiento</option>
+                        <option value="salud">salud</option>
+                        <option value="ropa">ropa</option>
+                        <option value="tecnologia">tecnologia</option>
+                        <option value="hogar">hogar</option>
+                        <option value="otros">otros</option>
+                    </select>
+                </div>
+                <div class="NuevoGasto">
+                    <label for="descripcion">descripcion</label>
+                    <textarea name="" id="descripcion" ></textarea>
+                </div>
+                <div class="NuevoGasto">
+                    <label for="fecha">fecha</label>
+                    <input type="date" id="fecha" required>
+                </div>
+                <button type="submit" class="boton">Guardar Gasto</button>
+            </form>
+        </div>
+
+        
+        <div class="verGastos" id="verGastos">
+            <button>Volver al menu</button>
+            <h2>Mis Gastos</h2>
+            <div>
+                <button>Ver todos los Gastos</button>
+                <button>Filtrar por Categoria</button>
+                <button>Filtrar por Fecha</button>
+            </div>
+            <div class="filtroCategoria" id="filtroCategoria">
+                <h3>Filtrar por Categoria</h3>
+                <div>comida</div>
+                <div>transporte</div>
+                <div>entretenimiento</div>
+                <div>salud</div>
+                <div>ropa</div>
+                <div>tecnologia</div>
+                <div>hogar</div>
+                <div>otros</div>
+            </div>
+        </div>
+
+    </div>
+
+
 </body>
 <script src="./script/script.js"></script>
 </html>
