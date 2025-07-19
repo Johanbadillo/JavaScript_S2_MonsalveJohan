@@ -10,7 +10,7 @@
     <div class="contenido">
         <h1>Simulador de Gastos Diarios</h1>
 
-        <div class="menu" id="menu">
+        <div class="menuActivo" id="menu">
             <button>Registrar Nuevo Gasto</button>
             <button>Ver Gastos</button>
             <button>Calcular Totales</button>
@@ -19,8 +19,8 @@
         </div>
 
 
-        <div class="Registrar" id="Registrar">
-            <button>Volver al menu</button>
+        <div class="menu" id="Registrar">
+            <button class="btn-volver" onclick="volvermenu()">Volver al menu</button>
             <h2>Registrar Nuevo Gasto</h2>
             <form action="./index.html">
                 <div class="NuevoGasto">
@@ -28,7 +28,7 @@
                     <input type="number" id="monto" required>
                 </div>
                 <div class="NuevoGasto">
-                    <label for="cantidad"></label>
+                    <label for="cantidad">cantidad</label>
                     <input type="number" id="cantidad" value="1" required>
                 </div>
                 <div class="NuevoGasto">
@@ -58,24 +58,24 @@
         </div>
 
 
-        <div class="verGastos" id="verGastos">
-            <button>Volver al menu</button>
+        <div class="menu" id="verGastos">
+            <button class="btn-volver" onclick="volvermenu()">Volver al menu</button>
             <h2>Mis Gastos</h2>
-            <div>
-                <button>Ver todos los Gastos</button>
-                <button>Filtrar por Categoria</button>
-                <button>Filtrar por Fecha</button>
+            <div class="filtros">
+                <button class="boton">Ver todos los Gastos</button>
+                <button class="boton">Filtrar por Categoria</button>
+                <button class="boton">Filtrar por Fecha</button>
             </div>
             <div class="filtroCategoria" id="filtroCategoria">
                 <h3>Filtrar por Categoria</h3>
-                <div>comida</div>
-                <div>transporte</div>
-                <div>entretenimiento</div>
-                <div>salud</div>
-                <div>ropa</div>
-                <div>tecnologia</div>
-                <div>hogar</div>
-                <div>otros</div>
+                <div class="categorias">comida</div>
+                <div class="categorias">transporte</div>
+                <div class="categorias">entretenimiento</div>
+                <div class="categorias">salud</div>
+                <div class="categorias">ropa</div>
+                <div class="categorias">tecnologia</div>
+                <div class="categorias">hogar</div>
+                <div class="categorias">otros</div>
             </div>
             <div class="filtroFecha" id="filtroFecha">
                 <h3>Filtrar por Rango de Fecha</h3>
@@ -87,27 +87,27 @@
         </div>
 
 
-        <div class="Calcular" id="Calcular">
-            <button>Volver al menu</button>
+        <div class="menu" id="Calcular">
+            <button class="btn-volver" onclick="volvermenu()">Volver al menu</button>
             <h2>Calcular Totales</h2>
-            <div>
-                <button>TotaL Diario</button>
-                <button>Total Semanal</button>
-                <button>Total Mensual</button>
+            <div class="filtros">
+                <button class="boton">TotaL Diario</button>
+                <button class="boton">Total Semanal</button>
+                <button class="boton">Total Mensual</button>
             </div>
-            <div class="resultadoCalculo"></div>
+            <div id="resultadoCalculo"></div>
         </div>
 
 
-        <div class="Reportes" id="Reportes">
-            <button>Volver menu</button>
+        <div class="menu" id="Reportes">
+            <button class="btn-volver" onclick="volvermenu()">Volver al menu</button>
             <h2>Reportes de Gastos</h2>
-            <div>
-                <button>Reporte Diario</button>
-                <button>Reporte Semanal</button>
-                <button>Reporte Mensual</button>
+            <div class="filtros">
+                <button class="boton">Reporte Diario</button>
+                <button class="boton">Reporte Semanal</button>
+                <button class="boton">Reporte Mensual</button>
             </div>
-            <div class="resultadoReporte"></div>
+            <div id="resultadoReporte"></div>
         </div>
     </div>
 
