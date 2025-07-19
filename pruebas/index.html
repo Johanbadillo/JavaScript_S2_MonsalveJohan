@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML a JavaScript - Valores</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>📝 Cómo tomar valores de HTML en JavaScript</h1>
+
+    <!-- INPUT TEXTO -->
+    <div class="seccion">
+        <h2>1. Input de Texto</h2>
+        <div class="campo">
+            <label>Escribe tu nombre:</label>
+            <input type="text" id="nombre" placeholder="Ej: Juan Pérez">
+        </div>
+        <button onclick="tomarTexto()">Tomar Valor</button>
+        <div class="codigo">
+            <strong>Código:</strong><br>
+            let nombre = document.getElementById('nombre').value;
+        </div>
+        <div id="resultado-texto" class="resultado" style="display:none;"></div>
+    </div>
+
+    <!-- INPUT NÚMERO -->
+    <div class="seccion">
+        <h2>2. Input de Número</h2>
+        <div class="campo">
+            <label>Ingresa tu edad:</label>
+            <input type="number" id="edad" min="1" max="120" placeholder="Ej: 25">
+        </div>
+        <button onclick="tomarNumero()">Tomar Valor</button>
+        <div class="codigo">
+            <strong>Código:</strong><br>
+            let edad = parseInt(document.getElementById('edad').value);
+        </div>
+        <div id="resultado-numero" class="resultado" style="display:none;"></div>
+    </div>
+
+    <!-- SELECT / COMBO -->
+    <div class="seccion">
+        <h2>3. Select (Cuadro de Opciones)</h2>
+        <div class="campo">
+            <label>Selecciona tu ciudad:</label>
+            <select id="ciudad">
+                <option value="">-- Selecciona una opción --</option>
+                <option value="bucaramanga">Bucaramanga</option>
+                <option value="bogota">Bogotá</option>
+                <option value="medellin">Medellín</option>
+                <option value="cartagena">Cartagena</option>
+                <option value="cali">Cali</option>
+            </select>
+        </div>
+        <button onclick="tomarOpcion()">Tomar Valor</button>
+        <div class="codigo">
+            <strong>Código:</strong><br>
+            let ciudad = document.getElementById('ciudad').value;<br>
+            let textoOpcion =
+            document.getElementById('ciudad').options[document.getElementById('ciudad').selectedIndex].text;
+        </div>
+        <div id="resultado-select" class="resultado" style="display:none;"></div>
+    </div>
+
+    <!-- RADIO BUTTONS -->
+    <div class="seccion">
+        <h2>4. Radio Buttons (Opciones únicas)</h2>
+        <div class="campo">
+            <label>¿Cuál es tu género?</label>
+            <input type="radio" id="masc" name="genero" value="masculino">
+            <label for="masc" style="display:inline; margin-left:5px; font-weight:normal;">Masculino</label><br>
+
+            <input type="radio" id="fem" name="genero" value="femenino">
+            <label for="fem" style="display:inline; margin-left:5px; font-weight:normal;">Femenino</label><br>
+
+            <input type="radio" id="otro" name="genero" value="otro">
+            <label for="otro" style="display:inline; margin-left:5px; font-weight:normal;">Otro</label>
+        </div>
+        <button onclick="tomarRadio()">Tomar Valor</button>
+        <div class="codigo">
+            <strong>Código:</strong><br>
+            let genero = document.querySelector('input[name="genero"]:checked').value;
+        </div>
+        <div id="resultado-radio" class="resultado" style="display:none;"></div>
+    </div>
+
+    <!-- CHECKBOX -->
+    <div class="seccion">
+        <h2>5. Checkbox (Múltiples opciones)</h2>
+        <div class="campo">
+            <label>¿Qué deportes practicas?</label>
+            <input type="checkbox" id="futbol" name="deportes" value="futbol">
+            <label for="futbol" style="display:inline; margin-left:5px; font-weight:normal;">Fútbol</label><br>
+
+            <input type="checkbox" id="basquet" name="deportes" value="basquet">
+            <label for="basquet" style="display:inline; margin-left:5px; font-weight:normal;">Básquet</label><br>
+
+            <input type="checkbox" id="natacion" name="deportes" value="natacion">
+            <label for="natacion" style="display:inline; margin-left:5px; font-weight:normal;">Natación</label><br>
+
+            <input type="checkbox" id="ciclismo" name="deportes" value="ciclismo">
+            <label for="ciclismo" style="display:inline; margin-left:5px; font-weight:normal;">Ciclismo</label>
+        </div>
+        <button onclick="tomarCheckbox()">Tomar Valores</button>
+        <div class="codigo">
+            <strong>Código:</strong><br>
+            let deportes = [];<br>
+            let checks = document.querySelectorAll('input[name="deportes"]:checked');<br>
+            checks.forEach(check => deportes.push(check.value));
+        </div>
+        <div id="resultado-checkbox" class="resultado" style="display:none;"></div>
+    </div>
+
+    <!-- TEXTAREA -->
+    <div class="seccion">
+        <h2>6. Textarea (Texto largo)</h2>
+        <div class="campo">
+            <label>Cuéntanos sobre ti:</label>
+            <textarea id="comentario" rows="4" placeholder="Escribe aquí tu comentario..."></textarea>
+        </div>
+        <button onclick="tomarTexarea()">Tomar Valor</button>
+        <div class="codigo">
+            <strong>Código:</strong><br>
+            let comentario = document.getElementById('comentario').value;
+        </div>
+        <div id="resultado-textarea" class="resultado" style="display:none;"></div>
+    </div>
+
+    <!-- EJEMPLO COMPLETO -->
+    <div class="seccion">
+        <h2>7. Ejemplo Completo - Formulario</h2>
+        <div class="campo">
+            <label>Nombre del producto:</label>
+            <input type="text" id="prod-nombre" placeholder="Ej: Hamburguesa">
+        </div>
+        <div class="campo">
+            <label>Precio:</label>
+            <input type="number" id="prod-precio" placeholder="Ej: 15000">
+        </div>
+        <div class="campo">
+            <label>Categoría:</label>
+            <select id="prod-categoria">
+                <option value="">-- Selecciona --</option>
+                <option value="comida">Comida</option>
+                <option value="bebida">Bebida</option>
+                <option value="postre">Postre</option>
+            </select>
+        </div>
+        <div class="campo">
+            <label>¿Disponible?</label>
+            <input type="checkbox" id="prod-disponible">
+            <label for="prod-disponible" style="display:inline; margin-left:5px; font-weight:normal;">Sí, está
+                disponible</label>
+        </div>
+        <button onclick="crearProducto()">Crear Producto</button>
+        <div id="resultado-completo" class="resultado" style="display:none;"></div>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>
