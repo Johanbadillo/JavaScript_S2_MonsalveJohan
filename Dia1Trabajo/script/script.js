@@ -87,7 +87,7 @@ function Opciones() {
             <li><strong>5.</strong> Eliminar dato registrad</li>
             <li><strong>6.</strong> Regresar al menu principal</li>
         `;
-        claseCSS = 'Error'
+        claseCSS = 'error'
     }
     resultadoDIV.className = 'resultado';
 

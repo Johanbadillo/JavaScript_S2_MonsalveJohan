@@ -1,4 +1,10 @@
+@font-face {
+    font-family: love;
+    src: url(./../fonts/lovelyn.otf);
+}
+
 body {
+    font-family: love;
     margin: 0;
     padding: 0;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)
@@ -86,13 +92,17 @@ ul li {
     font-size: 1.5rem;
     margin: 2vh;
     font-weight: lighter;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(to left, #667eea 0%, #764ba2 100%);
     border-radius: 15px;
     transition: all 0.3s ease;
     cursor: pointer;
-    position: relative;
-    overflow: hidden;
     padding: 1rem 1.5rem;
+    color: white;
+}
+
+ul li:hover {
+    transform: translateX(10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 input {
@@ -101,6 +111,7 @@ input {
     font-size: 1.2rem;
     text-align: center;
     max-width: 60px;
+    margin-top: 2rem;
 }
 
 label {
@@ -112,17 +123,31 @@ button {
     margin-left: auto;
     margin-right: auto;
     display: flex;
-    padding: 2%;
+    padding: 15px 30px;
     border-radius: 25px;
-    border: 3px solid purple;
-    background: rgba(238, 40, 238, 0.678);
+    border: none;
+    color: white;
+    background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-
+button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.284);
+}
 
 .error {
-    background-color: #fed7d7;
-    color: #742a2a;
-    border-left: 4px solid #e53e3e;
+    background: linear-gradient(#ff7675, #fd79a8);
+    color: white;
+    padding: 1rem;
+    border-radius: 15px;
+    margin-top: 1rem;
+    animation: cambiosMenu 0.4s ;
+}
+
+@keyframes cambiosMenu {
+    0%, 100%{transform: translateX(0);}
+    10%,30%,50%,70%,90%{transform: translateX(-5px);}
+    20%,40%,60%,80%{transform: translateX(5px);}
 }
