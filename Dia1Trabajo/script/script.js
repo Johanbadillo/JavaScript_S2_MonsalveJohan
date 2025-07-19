@@ -1,4 +1,4 @@
-const menuPrincipal=`
+const menuPrincipal = `
         <h1>Opciones Disponibles</h1>
         <ul>
             <li><strong>1.</strong> Registro y Gestión de Ingredientes</li>
@@ -8,21 +8,21 @@ const menuPrincipal=`
             <li><strong>5.</strong> Registro y Gestión de Hamburguesas</li>
             <li><strong>6.</strong> Salir del programa</li>
         </ul>
-        `;
+`;
 
-function opciones() {
+function Opciones() {
     let opcion = document.getElementById("opcion").value;
     let resultadoDIV = document.getElementById("resultado");
-    let menuPrincipal = document.querySelector(".menuPrincipal");
+    let menuPrincipalDIV = document.querySelector(".menuPrincipal");
 
     opcion = Number(opcion);
 
     let menu = '';
     let claseCSS = '';
 
-    resultadoDIV.innerHTML='';
-    resultadoDIV.className='';
-    resultadoDIV.style.display='none';
+    resultadoDIV.innerHTML = '';
+    resultadoDIV.className = '';
+    resultadoDIV.style.display = 'none';
 
     if (opcion == 1) {
         menu = `
@@ -37,9 +37,9 @@ function opciones() {
         </ul>
         `;
         claseCSS = 'opcion1';
-        menuPrincipal.innerHTML = menu;
-        menuPrincipal.classList.remove('opcion2', 'opcion3', 'opcion4', 'opcion5', 'opcion6', 'error');
-        menuPrincipal.classList.add(claseCSS);
+        menuPrincipalDIV.innerHTML = menu;
+        menuPrincipalDIV.classList.remove('opcion2', 'opcion3', 'opcion4', 'opcion5', 'error');
+        menuPrincipalDIV.classList.add(claseCSS);
     } else if (opcion == 2) {
         menu = `
         <h1>Historial Ingredientes</h1>
@@ -52,12 +52,11 @@ function opciones() {
             <li><strong>6.</strong> Regresar al menu principal</li>
         </ul>
         `;
-        claseCSS = 'opcion2'
-        menuPrincipal.innerHTML = menu;
-        menuPrincipal.classList.remove('opcion1', 'opcion3', 'opcion4', 'opcion5', 'opcion6', 'error');
-        menuPrincipal.classList.add(claseCSS);
-    }
-    else if (opcion == 3) {
+        claseCSS = 'opcion2';
+        menuPrincipalDIV.innerHTML = menu;
+        menuPrincipalDIV.classList.remove('opcion1', 'opcion3', 'opcion4', 'opcion5', 'error');
+        menuPrincipalDIV.classList.add(claseCSS);
+    } else if (opcion == 3) {
         menu = `
         <h1>Menu Categorias</h1>
         <ul>
@@ -69,12 +68,11 @@ function opciones() {
             <li><strong>6.</strong> Regresar al menu principal</li>
         </ul>
         `;
-        claseCSS = 'opcion3'
-        menuPrincipal.innerHTML = menu;
-        menuPrincipal.classList.remove('opcion2', 'opcion1', 'opcion4', 'opcion5', 'opcion6', 'error');
-        menuPrincipal.classList.add(claseCSS);
-    }
-    else if (opcion == 4) {
+        claseCSS = 'opcion3';
+        menuPrincipalDIV.innerHTML = menu;
+        menuPrincipalDIV.classList.remove('opcion1', 'opcion2', 'opcion4', 'opcion5', 'error');
+        menuPrincipalDIV.classList.add(claseCSS);
+    } else if (opcion == 4) {
         menu = `
         <h1>Menu Chefs</h1>
         <ul>
@@ -86,12 +84,11 @@ function opciones() {
             <li><strong>6.</strong> Regresar al menu principal</li>
         </ul>
         `;
-        claseCSS = 'opcion4'
-        menuPrincipal.innerHTML = menu;
-        menuPrincipal.classList.remove('opcion2', 'opcion3', 'opcion1', 'opcion5', 'opcion6', 'error');
-        menuPrincipal.classList.add(claseCSS);
-    }
-    else if (opcion == 5) {
+        claseCSS = 'opcion4';
+        menuPrincipalDIV.innerHTML = menu;
+        menuPrincipalDIV.classList.remove('opcion1', 'opcion2', 'opcion3', 'opcion5', 'error');
+        menuPrincipalDIV.classList.add(claseCSS);
+    } else if (opcion == 5) {
         menu = `
         <h1>Menu Hamburguesas</h1>
         <ul>
@@ -103,30 +100,30 @@ function opciones() {
             <li><strong>6.</strong> Regresar al menu principal</li>
         </ul>
         `;
-        claseCSS = 'opcion5'
-        menuPrincipal.innerHTML = menu;
-        menuPrincipal.classList.remove('opcion2', 'opcion3', 'opcion4', 'opcion1', 'opcion6', 'error');
-        menuPrincipal.classList.add(claseCSS);
+        claseCSS = 'opcion5';
+        menuPrincipalDIV.innerHTML = menu;
+        menuPrincipalDIV.classList.remove('opcion1', 'opcion2', 'opcion3', 'opcion4', 'error');
+        menuPrincipalDIV.classList.add(claseCSS);
     } else if (opcion == 6) {
-
-        menuPrincipal.classList.remove('opcion2', 'opcion3', 'opcion4', 'opcion5', 'opcion1','opcion6', 'error');
-        resultadoDIV.innerHTML=menuPrincipal
-        resultadoDIV.innerHTML = '<h2>Regresando al menu principal...</h2>';
+        resultadoDIV.innerHTML = '<h2>Regresando al menú principal...</h2>';
         resultadoDIV.style.display = 'flex';
-    }else {
+        setTimeout(() => {
+            menuPrincipalDIV.innerHTML = menuPrincipal;
+            menuPrincipalDIV.classList.remove('opcion1', 'opcion2', 'opcion3', 'opcion4', 'opcion5', 'error');
+            resultadoDIV.style.display = 'none';
+        }, 3000);
+    } else {
         menu = `<h2>Opción no válida</h2>
         <p>Por favor, seleccione una opción entre 1 y 6.</p>`;
         claseCSS = 'error';
         resultadoDIV.innerHTML = menu;
         resultadoDIV.classList.add(claseCSS);
-        resultadoDIV.style.display = 'flex';;
-        claseCSS = 'error'
+        resultadoDIV.style.display = 'flex';
     }
-
 }
 
 document.getElementById('opcion').addEventListener('keypress', function (event) {
     if (event.key === 'Enter') {
-        opciones();
+        Opciones();
     }
 });
