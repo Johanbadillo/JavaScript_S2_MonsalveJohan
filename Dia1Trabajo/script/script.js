@@ -78,7 +78,7 @@ function Opciones() {
     }else {
         menu = `
         <ul>
-        <h2>Opción no válida</h2>
+        <h2>Opcion no valida</h2>
         <p>Las opciones disponibles son:</p>
             <li><strong>1.</strong> Registrar dato nuevo</li>
             <li><strong>2.</strong> Leer datos registrado</li>
