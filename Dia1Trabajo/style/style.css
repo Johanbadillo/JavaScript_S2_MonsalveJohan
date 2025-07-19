@@ -151,3 +151,24 @@ button:hover {
     10%,30%,50%,70%,90%{transform: translateX(-5px);}
     20%,40%,60%,80%{transform: translateX(5px);}
 }
+
+.resultado{
+    display: none;
+}
+
+.error{
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+
+
+.opcion1 { background: rgba(18, 152, 255, 0.592); }
+.opcion2 { background: rgba(118, 75, 162, 0.552); }
+.opcion3 { background: rgba(255, 107, 107, 0.479); }
+.opcion4 { background: rgba(253, 121, 167, 0.544); }
+.opcion5 { background: rgba(85, 239, 195, 0.444); }
+
+
+
