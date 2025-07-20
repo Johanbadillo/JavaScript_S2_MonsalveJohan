@@ -247,6 +247,7 @@ while (booleanito == true) {
     let opciones = prompt(
         "===========================================\
     \n                               Simulador de Gasto Diario\
+    \n\
     \n===========================================\
     \nSeleccione una opción:\
     \n\
@@ -273,16 +274,16 @@ while (booleanito == true) {
         let enu = gastos.length;
         for (i = 0; i < enu; i++) {
             alert(
-                "Gasto N. " + (i+1) + "\n" +
-                "Monto: " +gastos[i]["montoGasto"]+ "\n"+
-                "Cantidad: "+gastos[i]["cantidad"]+ "\n"+
-                "Categoria: "+gastos[i]["categoria"]+ "\n"+
-                "Descripcion: "+gastos[i]["descripcion"]+ "\n"+
-                "Fecha: "+gastos[i]["fecha"]
+                "Gasto N. " + (i + 1) + "\n" +
+                "Monto: " + gastos[i]["montoGasto"] + "\n" +
+                "Cantidad: " + gastos[i]["cantidad"] + "\n" +
+                "Categoria: " + gastos[i]["categoria"] + "\n" +
+                "Descripcion: " + gastos[i]["descripcion"] + "\n" +
+                "Fecha: " + gastos[i]["fecha"]
             );
         }
     }
-    else if(opciones == "5"){
+    else if (opciones == "5") {
         alert(
             "Gracias por usar nuestro Programa"
         )
