@@ -59,7 +59,7 @@ h1 {
     transform: translateY(-5px);
 }
 
-.menu .btn-volver{
+.menu .btn-volver {
     box-shadow: 0px 5px 16px rgba(19, 118, 206, 0.781);
     margin-bottom: 20px;
     background: linear-gradient(to right, #6b6f743a 0%, #53575598 100%);
@@ -117,11 +117,11 @@ h2 {
     margin: 5px;
 }
 
-.Registrar .boton:hover{
+.Registrar .boton:hover {
     transform: translateY(-5px);
 }
 
-.menu .boton{
+.menu .boton {
     box-shadow: 0px 5px 16px rgba(19, 118, 206, 0.781);
     margin-bottom: 20px;
     background: linear-gradient(to right, #0a4d94 0%, #4940addc 100%);
@@ -134,12 +134,12 @@ h2 {
     margin: 5px;
 }
 
-.filtros{
+.filtros {
     display: flex;
     flex-direction: row;
 }
 
-.categorias{
+.categorias {
     margin: 5px;
     padding: 10px 20px;
     border-radius: 20px;
@@ -150,11 +150,12 @@ h2 {
     font-size: 1.5rem;
 }
 
-.categorias:hover{
+.categorias:hover {
     background: rgb(110, 30, 156);
     transform: translateY(-5px);
 }
-h3{
+
+h3 {
     font-size: 1.6rem;
 }
 
@@ -178,7 +179,7 @@ h3{
     transform: translateY(-5px);
 }
 
-.menuActivo a{
+.menuActivo a {
     text-decoration: none;
     display: grid;
     padding: 3vw;
@@ -197,4 +198,3 @@ h3{
 .menuActivo a:hover {
     transform: translateY(-5px);
 }
-
