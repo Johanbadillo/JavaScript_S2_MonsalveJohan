@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style/style.css">
 </head>
+
 <body>
     <div class="contenido">
         <h1>Simulador de Gastos Diarios</h1>
 
-        <div class="menuActivo" id="menu">
-            <button onclick="mostrarmenu(registrar)">Registrar Nuevo Gasto</button>
-            <button onclick="mostrarmenu(gastos)">Ver Gastos</button>
-            <button onclick="mostrarmenu(totales)">Calcular Totales</button>
-            <button onclick="mostrarmenu(reportes)">Generar Reportes</button>
-            <a href="./index2.html">Salir</a>
+        <div class="menu" id="menu">
+            <button onclick="mostrarmenu('registrar')">Registrar Nuevo Gasto</button>
+            <button onclick="mostrarmenu('gastos')">Ver Gastos</button>
+            <button onclick="mostrarmenu('totales')">Calcular Totales</button>
+            <button onclick="mostrarmenu('reportes')">Generar Reportes</button>
+            <button onclick="window.close()">Salir</button>
         </div>
 
 
-        <div class="menu" id="Registrar">
+        <div class="oculta" id="Registrar">
             <button class="btn-volver" onclick="volvermenu()">Volver al menu</button>
             <h2>Registrar Nuevo Gasto</h2>
             <form action="./index.html">
@@ -47,18 +49,18 @@
                 </div>
                 <div class="NuevoGasto">
                     <label for="descripcion">descripcion</label>
-                    <textarea name="" id="descripcion" ></textarea>
+                    <textarea name="" id="descripcion"></textarea>
                 </div>
                 <div class="NuevoGasto">
                     <label for="fecha">fecha</label>
                     <input type="date" id="fecha" required>
                 </div>
-                <button type="submit" class="boton">Guardar Gasto</button>
+                <button type="submit" class="boton" onclick="guardargasto()">Guardar Gasto</button>
             </form>
         </div>
 
 
-        <div class="menu" id="verGastos">
+        <div class="oculta" id="verGastos">
             <button class="btn-volver" onclick="volvermenu()">Volver al menu</button>
             <h2>Mis Gastos</h2>
             <div class="filtros">
@@ -87,7 +89,7 @@
         </div>
 
 
-        <div class="menu" id="Calcular">
+        <div class="oculta" id="Calcular">
             <button class="btn-volver" onclick="volvermenu()">Volver al menu</button>
             <h2>Calcular Totales</h2>
             <div class="filtros">
@@ -99,7 +101,7 @@
         </div>
 
 
-        <div class="menu" id="Reportes">
+        <div class="oculta" id="Reportes">
             <button class="btn-volver" onclick="volvermenu()">Volver al menu</button>
             <h2>Reportes de Gastos</h2>
             <div class="filtros">
@@ -115,4 +117,5 @@
 
 </body>
 <script src="./script/script.js"></script>
+
 </html>

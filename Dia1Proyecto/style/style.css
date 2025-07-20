@@ -158,17 +158,6 @@ h3{
     font-size: 1.6rem;
 }
 
-.filtroCategoria{
-    display: none;
-}
-
-.filtroFecha{
-    display: none;
-}
-
-.menu{
-    display: none;
-}
 
 .menuActivo button {
     display: grid;
