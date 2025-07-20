@@ -1,42 +1,6 @@
 // #################################
 //            Trabajo
 // #################################
-
-let booleanito = true;
-
-while (booleanito == true) {
-    let opciones = prompt(
-        "===========================================\
-    \n                               Simulador de Gasto Diario\
-    \n===========================================\
-    \nSeleccione una opción:\
-    \n\
-    \n1. Registrar nuevo gasto\
-    \n2. Enumere los gastos\
-    \n3. Calcular total de gastos\
-    \n4. Generar reporte de gastos\
-    \n5. Salir\
-    \n==========================================="
-    );
-    if (opciones == "1") {
-        let monto = prompt("Ingrese el nombre del nuevo usuario");
-        let cantidad = prompt(Number("Ingrese la cantidad"));
-        let categoria = prompt(Number("Ingrese el numero de la categoria\n 1. Comida\n2. Transporte\n3. Entretenimiento\n4. Salud\n5. Ropa\n6. Tecnologia\n7. Hogar\n8. Otros"));
-        let descripcion = prompt("Ingrese una descripcion opcional");
-        let fecha = date.today().strftime("%Y-%m-%d");
-        gastos.push({
-            "monto":monto,
-            "cantidad":cantidad,
-            "categoria":categoria,
-            "descripcion":descripcion,
-            "fecha":fecha,
-        });
-    }
-}
-
-
-
-
 let gastos = [
     {
         "montoGasto": 10000,
@@ -277,4 +241,54 @@ let gastos = [
         "fecha": "2025-07-19"
     }
 ]
+
+let booleanito = true;
+while (booleanito == true) {
+    let opciones = prompt(
+        "===========================================\
+    \n                               Simulador de Gasto Diario\
+    \n===========================================\
+    \nSeleccione una opción:\
+    \n\
+    \n1. Registrar nuevo gasto\
+    \n2. Ver los gastos\
+    \n3. Calcular total de gastos\
+    \n4. Generar reporte de gastos\
+    \n5. Salir\
+    \n==========================================="
+    );
+    if (opciones == "1") {
+        let montoGasto = prompt("Ingrese el monto del gasto");
+        let cantidad = prompt("Ingrese la cantidad");
+        let categoria = prompt("Ingrese el numero de la categoria\n1. Comida\n2. Transporte\n3. Entretenimiento\n4. Salud\n5. Ropa\n6. Tecnologia\n7. Hogar\n8. Otros");
+        let descripcion = prompt("Ingrese una descripcion opcional");
+        gastos.push({
+            "montoGasto": montoGasto,
+            "cantidad": cantidad,
+            "categoria": categoria,
+            "descripcion": descripcion,
+        });
+    }
+    else if (opciones == "2") {
+        let enu = gastos.length;
+        for (i = 0; i < enu; i++) {
+            alert(
+                "Gasto N. " + (i+1) + "\n" +
+                "Monto: " +gastos[i]["montoGasto"]+ "\n"+
+                "Cantidad: "+gastos[i]["cantidad"]+ "\n"+
+                "Categoria: "+gastos[i]["categoria"]+ "\n"+
+                "Descripcion: "+gastos[i]["descripcion"]+ "\n"+
+                "Fecha: "+gastos[i]["fecha"]
+            );
+        }
+    }
+    else if(opciones == "5"){
+        alert(
+            "Gracias por usar nuestro Programa"
+        )
+        booleanito = false
+    }
+}
+
+
 // Creado por Johan Styben Monsalve Badillo C.C - 1097911956
