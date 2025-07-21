@@ -1,6 +1,7 @@
 // #################################
 //            Trabajo
 // #################################
+
 let gastos = [
     {
         "montoGasto": 10000,
@@ -247,7 +248,6 @@ while (booleanito == true) {
     let opciones = prompt(
         "===========================================\
     \n                               Simulador de Gasto Diario\
-    \n\
     \n===========================================\
     \nSeleccione una opción:\
     \n\
@@ -263,8 +263,8 @@ while (booleanito == true) {
         let cantidad = prompt("Ingrese la cantidad");
         let categoriaNumero = prompt("Ingrese el numero de la categoria\n1. Comida\n2. Transporte\n3. Entretenimiento\n4. Salud\n5. Ropa\n6. Tecnologia\n7. Hogar\n8. Otros");
         let descripcion = prompt("Ingrese una descripcion opcional");
-        let fecha = prompt("Ingrese la fecha que deseas registrar el gasto en formato YYYY-MM-DD")
-
+        let fecha = prompt("Ingrese la fecha que deseas registrar el gasto en formato YYYY-MM-DD");
+        let confirmacion = prompt("Seguro que quieres agregar este gasto? \n1. Si \n2. No\n");
         const categorias = {
             "1": "comida",
             "2": "transporte",
@@ -275,15 +275,22 @@ while (booleanito == true) {
             "7": "hogar",
             "8": "otros"
         }
-        let categoria = categorias[categoriaNumero]
+        let categoria = categorias[categoriaNumero];
 
-        gastos.push({
-            "montoGasto": Number(montoGasto),
-            "cantidad": Number(cantidad),
-            "categoria": categoria,
-            "descripcion": descripcion,
-            "fecha": fecha,
-        });
+        
+        if(confirmacion == "1"){
+                gastos.push({
+                    "montoGasto": Number(montoGasto),
+                    "cantidad": Number(cantidad),
+                    "categoria": categoria,
+                    "descripcion": descripcion,
+                    "fecha": fecha,
+                });
+                alert("El gasto fue guardado exitosamente")
+            }
+        else {
+            alert("No se guardo el gasto");
+        }
     }
     else if (opciones == "2") {
         let enu = gastos.length;
@@ -308,7 +315,7 @@ while (booleanito == true) {
             tecnologia: 0,
             hogar: 0,
             otros: 0
-        }
+        };
         for (i = 0; i < gastos.length; i++) {
             totalGastos += Number(gastos[i].montoGasto);
             let cat = gastos[i].categoria;
@@ -344,7 +351,7 @@ while (booleanito == true) {
             tecnologia: 0,
             hogar: 0,
             otros: 0
-        }
+        };
         for (i = 0; i < gastos.length; i++) {
             totalGastos += Number(gastos[i].montoGasto);
             let cat = gastos[i].categoria;
@@ -356,7 +363,7 @@ while (booleanito == true) {
             else if (cat == "tecnologia") categorias.tecnologia += Number(gastos[i].montoGasto);
             else if (cat == "hogar") categorias.hogar += Number(gastos[i].montoGasto);
             else if (cat == "otros") categorias.otros += Number(gastos[i].montoGasto);
-        }
+        };
 
         let mensaje = "Reporte de tus gastos en todas las categorias \n"
         mensaje += "Total de gastos: " + totalGastos + "\n\n";
@@ -369,16 +376,16 @@ while (booleanito == true) {
         mensaje += "Tecnologia: " + categorias.tecnologia + "\n";
         mensaje += "Hogar: " + categorias.hogar + "\n";
         mensaje += "Otros: " + categorias.otros + "\n";
-        mensaje += "Es el reporte de tus gasto :)"
+        mensaje += "Es el reporte de tus gasto :)";
         alert(mensaje);
     }
 
     else if (opciones == "5") {
         alert(
             "Gracias por usar nuestro Programa"
-        )
-        booleanito = false
-    }
+        );
+        booleanito = false;
+    };
 }
 
 
