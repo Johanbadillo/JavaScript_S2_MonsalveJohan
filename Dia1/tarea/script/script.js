@@ -340,6 +340,8 @@ while (booleanito == true) {
         mensaje += "Hogar: " + categorias.hogar + "\n";
         mensaje += "Otros: " + categorias.otros + "\n";
         alert(mensaje);
+
+        
     }else if (opciones == "4") {
         let totalGastos = 0;
         let categorias = {
