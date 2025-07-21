@@ -263,11 +263,13 @@ while (booleanito == true) {
         let cantidad = prompt("Ingrese la cantidad");
         let categoria = prompt("Ingrese el numero de la categoria\n1. Comida\n2. Transporte\n3. Entretenimiento\n4. Salud\n5. Ropa\n6. Tecnologia\n7. Hogar\n8. Otros");
         let descripcion = prompt("Ingrese una descripcion opcional");
+        let fecha = prompt("Ingrese la fecha que deseas registrar el gasto en formato YYYY-MM-DD")
         gastos.push({
             "montoGasto": montoGasto,
             "cantidad": cantidad,
             "categoria": categoria,
             "descripcion": descripcion,
+            "fecha": fecha,
         });
     }
     else if (opciones == "2") {
