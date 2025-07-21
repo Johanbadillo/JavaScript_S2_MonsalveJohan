@@ -110,7 +110,7 @@ let gastos = [
     {
         "montoGasto": 9999,
         "cantidad": 1,
-        "categoria": "tecnolog\u00eda",
+        "categoria": "tecnologia",
         "descripcion": "teclado mec\u00e1nico",
         "fecha": "2025-05-01"
     },
@@ -297,7 +297,82 @@ while (booleanito == true) {
                 "Fecha: " + gastos[i]["fecha"]
             );
         }
+    } else if (opciones == "3") {
+        let totalGastos = 0;
+        let categorias = {
+            comida: 0,
+            transporte: 0,
+            entretenimiento: 0,
+            salud: 0,
+            ropa: 0,
+            tecnologia: 0,
+            hogar: 0,
+            otros: 0
+        }
+        for (i = 0; i < gastos.length; i++) {
+            totalGastos += Number(gastos[i].montoGasto);
+            let cat = gastos[i].categoria;
+            if (cat === "comida") categorias.comida += Number(gastos[i].montoGasto);
+            else if (cat == "transporte") categorias.transporte += Number(gastos[i].montoGasto);
+            else if (cat == "entretenimiento") categorias.entretenimiento += Number(gastos[i].montoGasto);
+            else if (cat == "salud") categorias.salud += Number(gastos[i].montoGasto);
+            else if (cat == "ropa") categorias.ropa += Number(gastos[i].montoGasto);
+            else if (cat == "tecnologia") categorias.tecnologia += Number(gastos[i].montoGasto);
+            else if (cat == "hogar") categorias.hogar += Number(gastos[i].montoGasto);
+            else if (cat == "otros") categorias.otros += Number(gastos[i].montoGasto);
+        }
+
+        let mensaje = "Total de gastos: " + totalGastos + "\n\n";
+        mensaje += "Gasto por categoria:\n";
+        mensaje += "Comida: " + categorias.comida + "\n";
+        mensaje += "Transporte: " + categorias.transporte + "\n";
+        mensaje += "Entretenimiento: " + categorias.entretenimiento + "\n";
+        mensaje += "Salud: " + categorias.salud + "\n";
+        mensaje += "Ropa: " + categorias.ropa + "\n";
+        mensaje += "Tecnologia: " + categorias.tecnologia + "\n";
+        mensaje += "Hogar: " + categorias.hogar + "\n";
+        mensaje += "Otros: " + categorias.otros + "\n";
+        alert(mensaje);
+    }else if (opciones == "4") {
+        let totalGastos = 0;
+        let categorias = {
+            comida: 0,
+            transporte: 0,
+            entretenimiento: 0,
+            salud: 0,
+            ropa: 0,
+            tecnologia: 0,
+            hogar: 0,
+            otros: 0
+        }
+        for (i = 0; i < gastos.length; i++) {
+            totalGastos += Number(gastos[i].montoGasto);
+            let cat = gastos[i].categoria;
+            if (cat === "comida") categorias.comida += Number(gastos[i].montoGasto);
+            else if (cat == "transporte") categorias.transporte += Number(gastos[i].montoGasto);
+            else if (cat == "entretenimiento") categorias.entretenimiento += Number(gastos[i].montoGasto);
+            else if (cat == "salud") categorias.salud += Number(gastos[i].montoGasto);
+            else if (cat == "ropa") categorias.ropa += Number(gastos[i].montoGasto);
+            else if (cat == "tecnologia") categorias.tecnologia += Number(gastos[i].montoGasto);
+            else if (cat == "hogar") categorias.hogar += Number(gastos[i].montoGasto);
+            else if (cat == "otros") categorias.otros += Number(gastos[i].montoGasto);
+        }
+
+        let mensaje = "Reporte de tus gastos en todas las categorias \n"
+        mensaje += "Total de gastos: " + totalGastos + "\n\n";
+        mensaje += "Gasto por categoria:\n";
+        mensaje += "Comida: " + categorias.comida + "\n";
+        mensaje += "Transporte: " + categorias.transporte + "\n";
+        mensaje += "Entretenimiento: " + categorias.entretenimiento + "\n";
+        mensaje += "Salud: " + categorias.salud + "\n";
+        mensaje += "Ropa: " + categorias.ropa + "\n";
+        mensaje += "Tecnologia: " + categorias.tecnologia + "\n";
+        mensaje += "Hogar: " + categorias.hogar + "\n";
+        mensaje += "Otros: " + categorias.otros + "\n";
+        mensaje += "Es el reporte de tus gasto :)"
+        alert(mensaje);
     }
+
     else if (opciones == "5") {
         alert(
             "Gracias por usar nuestro Programa"
