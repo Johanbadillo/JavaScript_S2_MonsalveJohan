@@ -263,7 +263,17 @@ while (booleanito == true) {
         let cantidad = prompt("Ingrese la cantidad");
         let categoriaNumero = prompt("Ingrese el numero de la categoria\n1. Comida\n2. Transporte\n3. Entretenimiento\n4. Salud\n5. Ropa\n6. Tecnologia\n7. Hogar\n8. Otros");
         let descripcion = prompt("Ingrese una descripcion opcional");
-        let fecha = prompt("Ingrese la fecha que deseas registrar el gasto en formato YYYY-MM-DD");
+        let fopcion = prompt(
+            "Ingrese una opcion numerica\
+        \n 1. Ingresar la fecha manualmente\
+        \n 2. Ingresar la fecha actual")
+        if (fopcion == "1") {
+            let fechaopcion = prompt("Ingrese la fecha que deseas registrar el gasto en formato YYYY-MM-DD");
+            fecha = fechaopcion
+        } else if (fopcion == "2") {
+            const fechaopcion = new Date().toISOString().split('T')[0];
+            fecha = fechaopcion
+        }
         let confirmacion = prompt("Seguro que quieres agregar este gasto? \n1. Si \n2. No\n");
         const categorias = {
             "1": "comida",
@@ -277,32 +287,76 @@ while (booleanito == true) {
         }
         let categoria = categorias[categoriaNumero];
 
-        
-        if(confirmacion == "1"){
-                gastos.push({
-                    "montoGasto": Number(montoGasto),
-                    "cantidad": Number(cantidad),
-                    "categoria": categoria,
-                    "descripcion": descripcion,
-                    "fecha": fecha,
-                });
-                alert("El gasto fue guardado exitosamente")
-            }
+
+        if (confirmacion == "1") {
+            gastos.push({
+                "montoGasto": Number(montoGasto),
+                "cantidad": Number(cantidad),
+                "categoria": categoria,
+                "descripcion": descripcion,
+                "fecha": fecha,
+            });
+            alert("El gasto fue guardado exitosamente")
+        }
         else {
             alert("No se guardo el gasto");
         }
     }
     else if (opciones == "2") {
-        let enu = gastos.length;
-        for (i = 0; i < enu; i++) {
-            alert(
-                "Gasto N. " + (i + 1) + "\n" +
-                "Monto: " + gastos[i]["montoGasto"] + "\n" +
-                "Cantidad: " + gastos[i]["cantidad"] + "\n" +
-                "Categoria: " + gastos[i]["categoria"] + "\n" +
-                "Descripcion: " + gastos[i]["descripcion"] + "\n" +
-                "Fecha: " + gastos[i]["fecha"]
-            );
+        let vopciones = prompt(
+            "===========================================\
+        \n                               Listar Gastos\
+        \n===========================================\
+        \nSeleccione una opción para filtrar los gastos:\
+        \n\
+        \n1. Ver todos los gastos\
+        \n2. Filtrar por categoría\
+        \n3. Filtrar por rango de fechas\
+        \n4. Regresar al menú principal\
+        \n==========================================="
+        );
+        if (vopciones == "1") {
+            let enu = gastos.length;
+            for (i = 0; i < enu; i++) {
+                alert(
+                    "Gasto N. " + (i + 1) + "\n" +
+                    "Monto: " + gastos[i]["montoGasto"] + "\n" +
+                    "Cantidad: " + gastos[i]["cantidad"] + "\n" +
+                    "Categoria: " + gastos[i]["categoria"] + "\n" +
+                    "Descripcion: " + gastos[i]["descripcion"] + "\n" +
+                    "Fecha: " + gastos[i]["fecha"]
+                )
+            };
+        } else if (vopciones == "2") {
+            let fcategoria = prompt("Ingrese el numero de la categoria\n1. Comida\n2. Transporte\n3. Entretenimiento\n4. Salud\n5. Ropa\n6. Tecnologia\n7. Hogar\n8. Otros");
+            const categorias = {
+                "1": "comida",
+                "2": "transporte",
+                "3": "entretenimiento",
+                "4": "salud",
+                "5": "ropa",
+                "6": "tecnologia",
+                "7": "hogar",
+                "8": "otros"
+            }
+            let categorianombre = categorias[fcategoria];
+            let encontrados = gastos.filter(g => g.categoria === categorianombre);
+            if (encontrados.length == 0) {
+                alert("No hay gastos registrados en esa categoria.");
+            } else {
+                alert("paso por aqui")
+                enu = encontrados.length
+                for (i = 0; i < enu; i++) {
+                    alert(
+                        "Gasto N. " + (i + 1) + "\n" +
+                        "Monto: " + encontrados[i]["montoGasto"] + "\n" +
+                        "Cantidad: " + encontrados[i]["cantidad"] + "\n" +
+                        "Categoria: " + encontrados[i]["categoria"] + "\n" +
+                        "Descripcion: " + encontrados[i]["descripcion"] + "\n" +
+                        "Fecha: " + encontrados[i]["fecha"]
+                    )
+                };
+            }
         }
     } else if (opciones == "3") {
         let totalGastos = 0;
@@ -341,8 +395,8 @@ while (booleanito == true) {
         mensaje += "Otros: " + categorias.otros + "\n";
         alert(mensaje);
 
-        
-    }else if (opciones == "4") {
+
+    } else if (opciones == "4") {
         let totalGastos = 0;
         let categorias = {
             comida: 0,
@@ -387,7 +441,8 @@ while (booleanito == true) {
             "Gracias por usar nuestro Programa"
         );
         booleanito = false;
-    };
+    }
+
 }
 
 
