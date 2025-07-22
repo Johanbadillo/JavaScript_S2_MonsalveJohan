@@ -344,7 +344,24 @@ while (booleanito == true) {
             if (encontrados.length == 0) {
                 alert("No hay gastos registrados en esa categoria.");
             } else {
-                alert("paso por aqui")
+                enu = encontrados.length
+                for (i = 0; i < enu; i++) {
+                    alert(
+                        "Gasto N. " + (i + 1) + "\n" +
+                        "Monto: " + encontrados[i]["montoGasto"] + "\n" +
+                        "Cantidad: " + encontrados[i]["cantidad"] + "\n" +
+                        "Categoria: " + encontrados[i]["categoria"] + "\n" +
+                        "Descripcion: " + encontrados[i]["descripcion"] + "\n" +
+                        "Fecha: " + encontrados[i]["fecha"]
+                    )
+                };
+            }
+        }else if (vopciones == "3"){
+            let ffecha = prompt("Ingrese la fecha de la cual quieres ver los gastos (YYYY-MM-DD): ");
+            let encontrados = gastos.filter(g => g.fecha == ffecha);
+            if (encontrados.length == 0) {
+                alert("No hay gastos registrados en este dia.");
+            } else {
                 enu = encontrados.length
                 for (i = 0; i < enu; i++) {
                     alert(
