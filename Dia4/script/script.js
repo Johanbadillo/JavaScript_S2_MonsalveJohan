@@ -1,4 +1,4 @@
-let = ingredientes[
+let ingredientes = [
     {
         "nombre": "Pan",
         "descripcion": "Pan de hamburguesa clásico",
@@ -17,9 +17,9 @@ let = ingredientes[
         "precio": 1.5,
         "stock": 200
     }
-]
+];
 
-let = categorias[
+let categorias = [
     {
         "nombre": "Clásica",
         "descripcion": "Hamburguesas clásicas y sabrosas"
@@ -32,9 +32,9 @@ let = categorias[
         "nombre": "Gourmet",
         "descripcion": "Hamburguesas gourmet con ingredientes premium"
     }
-]
+];
 
-let hamgur =[
+let hamgur = [
     {
         "nombre": "Clásica",
         "categoria": "Clásica",
@@ -56,9 +56,9 @@ let hamgur =[
         "precio": 12,
         "chef": "ChefC"
     }
-]
+];
 
-let = chefs[
+let chefs = [
     {
         "nombre": "ChefA",
         "especialidad": "Carnes"
@@ -71,9 +71,12 @@ let = chefs[
         "nombre": "ChefC",
         "especialidad": "Gourmet"
     }
-]
+];
+
+
+
 let booleanito = true
-while (booleanito == true ){
+while (booleanito == true) {
     let opciones = prompt(
         "===========================================\
     \n                               Hamburguesería\
@@ -86,8 +89,8 @@ while (booleanito == true ){
     \n4. Ingresar al menu de Chefs\
     \n5. Salir\
     \n==========================================="
-    )
-    if(opciones == "1"){
+    );
+    if (opciones == "1") {
         let Popciones = prompt(
             "===========================================\
         \n                               Menu Ingredientes\
@@ -101,10 +104,10 @@ while (booleanito == true ){
         \n5. Salir\
         \n==========================================="
         )
-        if (Popciones == "1"){
+        if (Popciones == "1") {
 
         }
-    }else if(opciones == "2"){
+    } else if (opciones == "2") {
         let Popciones = prompt(
             "===========================================\
         \n                               Menu Categorias\
@@ -117,11 +120,11 @@ while (booleanito == true ){
         \n4. Ver Categoria\
         \n5. Salir\
         \n==========================================="
-        )
-        if (Popciones == "1"){
+        );
+        if (Popciones == "1") {
 
         }
-    }else if(opciones == "3"){
+    } else if (opciones == "3") {
         let Popciones = prompt(
             "===========================================\
         \n                               Menu Hamburguesas\
@@ -134,11 +137,11 @@ while (booleanito == true ){
         \n4. Ver Hamburguesas\
         \n5. Salir\
         \n==========================================="
-        )
-        if (Popciones == "1"){
+        );
+        if (Popciones == "1") {
 
         }
-    }else if(opciones == "4"){
+    } else if (opciones == "4") {
         let Popciones = prompt(
             "===========================================\
         \n                               Menu Chefs\
@@ -151,10 +154,10 @@ while (booleanito == true ){
         \n4. Ver Chefs\
         \n5. Salir\
         \n==========================================="
-        )
-        if (Popciones == "1"){
+        );
+        if (Popciones == "1") {
 
         }
-}
+    }
 }
 
