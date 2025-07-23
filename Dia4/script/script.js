@@ -138,6 +138,8 @@ while (booleanito == true) {
                     "Precio: " + ingredientes[i]["precio"] + "\n" +
                     "Stock: " + ingredientes[i]["stock"]
                 )}
+        } else{
+            alert("Regresando al menu principal(Dar Enter para continuar):")
         }
     } else if (opciones == "2") {
         let Popciones = prompt(
@@ -182,6 +184,8 @@ while (booleanito == true) {
                     "Nombre: " + categorias[i]["nombre"] + "\n" +
                     "Descripcion: " + categorias[i]["descripcion"]
                 )}
+        }else{
+            alert("Regresando al menu principal(Dar Enter para continuar):")
         }
     } else if (opciones == "3") {
         let Popciones = prompt(
@@ -232,6 +236,8 @@ while (booleanito == true) {
                     "Precio: " + ingredientes[i]["precio"] + "\n" +
                     "Stock: " + ingredientes[i]["stock"]
                 )}
+        }else{
+            alert("Regresando al menu principal(Dar Enter para continuar):")
         }
     } else if (opciones == "4") {
         let Popciones = prompt(
@@ -276,6 +282,8 @@ while (booleanito == true) {
                     "Nombre: " + chefs[i]["nombre"] + "\n" +
                     "Especialidad: " + chefs[i]["especialidad"]
                 )}
+        }else{
+            alert("Regresando al menu principal(Dar Enter para continuar):")
         }
     } else if (opciones == "5"){
         alert("Saliendo del Programa,Aqui estaremos para cualquier solicitud :)");
