@@ -91,7 +91,7 @@ while (booleanito == true) {
         )
         if (Popciones == "1") {
             let nombre = prompt("Ingrese el nombre del nuevo Ingrediente");
-            let descripcion = prompt("Ingrese la Descripcion del Ingrediente(Opcional,Dale enter para continuar");
+            let descripcion = prompt("Ingrese la Descripcion del Ingrediente(Opcional).Dale Enter para continuar)");
             let precio = prompt("Ingrese el Precio del Ingrediente");
             let stock = prompt("Ingrese la cantidad de stock que cuenta el Ingrediente");
             let confirmacion = prompt("Seguro que quieres agregar este Ingrediente? \n1. Si \n2. No\n");
@@ -110,7 +110,7 @@ while (booleanito == true) {
             }
         } else if (Popciones == "2") {
             let elimi = prompt("Ingrese el numero del Ingrediente que deseas eliminar");
-            ingredientes.splice(elimi - 1);
+            ingredientes.splice(elimi - 1, 1);
             alert("Ingrediente Eliminado")
         } else if (Popciones == "3") {
             let cambio = prompt("Ingrese el numero del ingrediente que quieres actualizar")
@@ -168,8 +168,8 @@ while (booleanito == true) {
             }
         } else if (Popciones == "2") {
             let elimi = prompt("Ingrese el numero de la Categoria que deseas eliminar");
-            categorias.splice(elimi - 1);
-            alert("Categoria Eliminada\nSi no deseas eliminar nada darle Enter")
+            categorias.splice(elimi - 1, 1);
+            alert("Categoria eliminada")
         } else if (Popciones == "3") {
             let cambio = prompt("Ingrese el numero de la categoria que quieres actualizar")
             let Nnombre = prompt("Ingrese el nombre de la categoria");
@@ -226,7 +226,7 @@ while (booleanito == true) {
             }
         } else if (Popciones == "2") {
             let elimi = prompt("Ingrese el numero de la hamburguesa que deseas eliminar");
-            hamgur.splice(elimi - 1);
+            hamgur.splice(elimi - 1, 1);
             alert("Hamburguesa Eliminada")
         } else if (Popciones == "3") {
             let cambio = prompt("Ingrese el numero de la hamburguesa que quieres actualizar")
@@ -236,7 +236,7 @@ while (booleanito == true) {
             let Nprecio = prompt("Ingrese el precio de la hamburguesa");
             let Nchef = prompt("Ingrese el chef de la hamburguesa")
             hamgur[cambio - 1]["nombre"] = Nnombre;
-            hamgur[cambio - 1]["descripcion"] = Ncategoria
+            hamgur[cambio - 1]["categoria"] = Ncategoria
             hamgur[cambio - 1]["ingredientes"] = Ningredientes
             hamgur[cambio - 1]["precio"] = Nprecio
             hamgur[cambio - 1]["chef"] = Nchef
@@ -245,7 +245,7 @@ while (booleanito == true) {
             let enu = hamgur.length;
             for (i = 0; i < enu; i++) {
                 alert(
-                    "Ingrediente N. " + (i + 1) + "\n" +
+                    "Hamburguesa N. " + (i + 1) + "\n" +
                     "Nombre: " + hamgur[i]["nombre"] + "\n" +
                     "Categoria: " + hamgur[i]["categoria"] + "\n" +
                     "Ingredientes: " + hamgur[i]["ingredientes"] + "\n" +
@@ -287,7 +287,7 @@ while (booleanito == true) {
             }
         } else if (Popciones == "2") {
             let elimi = prompt("Ingrese el numero del chef que deseas eliminar");
-            chefs.splice(elimi - 1);
+            chefs.splice(elimi - 1, 1);
             alert("Chef Eliminado")
         } else if (Popciones == "3") {
             let cambio = prompt("Ingrese el numero del chef que quieres actualizar")
@@ -300,7 +300,7 @@ while (booleanito == true) {
             let enu = chefs.length;
             for (i = 0; i < enu; i++) {
                 alert(
-                    "Ingrediente N. " + (i + 1) + "\n" +
+                    "Chef N. " + (i + 1) + "\n" +
                     "Nombre: " + chefs[i]["nombre"] + "\n" +
                     "Especialidad: " + chefs[i]["especialidad"]
                 )
