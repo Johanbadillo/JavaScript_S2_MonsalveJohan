@@ -109,36 +109,46 @@ while (booleanito == true) {
             let precio = prompt("Ingrese el Precio del Ingrediente");
             let stock = prompt("Ingrese la cantidad de stock que cuenta el Ingrediente");
             let confirmacion = prompt("Seguro que quieres agregar este Ingrediente? \n1. Si \n2. No\n");
-            if (confirmacion == "1"){
+            if (confirmacion == "1") {
                 ingredientes.push({
                     "nombre": nombre,
                     "descripcion": descripcion,
-                    "precio":precio,
-                    "stock":stock,
+                    "precio": precio,
+                    "stock": stock,
                 });
                 alert("El ingrediente fue guardado con exito")
-            }else if(confirmacion == "2"){
+            } else if (confirmacion == "2") {
                 alert("Ingrediente no agregado")
-            }else{
+            } else {
                 alert("Opcion incorrecta,Ingrediente no agregado \nRegresando al menu principal")
             }
-        }else if(Popciones == "2"){
+        } else if (Popciones == "2") {
             let elimi = prompt("Ingrese el numero del Ingrediente que deseas eliminar");
-            ingredientes.splice(elimi-1);
+            ingredientes.splice(elimi - 1);
             alert("Ingrediente Eliminado")
-        }else if(Popciones == "3"){
-            
-        }else if(Popciones =="4"){
+        } else if (Popciones == "3") {
+            let cambio = prompt("Ingrese el Ingrediente que quieres actualizar")
+            let Nnombre = prompt("Ingrese el nombre del Ingrediente que quieres actualizar");
+            let Ndescripcion = prompt("Ingrese la Descripcion del Ingrediente(Opcional,Dale enter para continuar");
+            let Nprecio = prompt("Ingrese el Precio del Ingrediente");
+            let Nstock = prompt("Ingrese la cantidad de stock que cuenta el Ingrediente");
+            ingredientes[cambio - 1]["nombre"] = Nnombre;
+            ingredientes[cambio - 1]["descripcion"] = Ndescripcion;
+            ingredientes[cambio - 1]["precio"] = Nprecio;
+            ingredientes[cambio - 1]["stock"] = Nstock;
+            alert("Ingrediente Actualizado")
+        } else if (Popciones == "4") {
             let enu = ingredientes.length;
-            for(i = 0; i < enu; i ++){
+            for (i = 0; i < enu; i++) {
                 alert(
                     "Ingrediente N. " + (i + 1) + "\n" +
                     "Nombre: " + ingredientes[i]["nombre"] + "\n" +
                     "Descripcion: " + ingredientes[i]["descripcion"] + "\n" +
                     "Precio: " + ingredientes[i]["precio"] + "\n" +
                     "Stock: " + ingredientes[i]["stock"]
-                )}
-        } else{
+                )
+            }
+        } else {
             alert("Regresando al menu principal(Dar Enter para continuar):")
         }
     } else if (opciones == "2") {
@@ -159,32 +169,38 @@ while (booleanito == true) {
             let nombre = prompt("Ingrese el nombre de la nueva categoria");
             let descripcion = prompt("Ingrese la Descripcion de la categoria");
             let confirmacion = prompt("Seguro que quieres agregar esta Categoria? \n1. Si \n2. No\n");
-            if (confirmacion == "1"){
+            if (confirmacion == "1") {
                 categorias.push({
                     "nombre": nombre,
                     "descripcion": descripcion,
                 });
                 alert("La Categoria fue guardado con exito")
-            }else if(confirmacion == "2"){
+            } else if (confirmacion == "2") {
                 alert("Categoria no agregado")
-            }else{
+            } else {
                 alert("Opcion incorrecta,Categoria no agregado \nRegresando al menu principal")
             }
-        }else if(Popciones == "2"){
+        } else if (Popciones == "2") {
             let elimi = prompt("Ingrese el numero de la Categoria que deseas eliminar");
-            categorias.splice(elimi-1);
+            categorias.splice(elimi - 1);
             alert("Categoria Eliminada\nSi no deseas eliminar nada darle Enter")
-        }else if(Popciones == "3"){
-            
-        }else if(Popciones =="4"){
+        } else if (Popciones == "3") {
+            let cambio = prompt("Ingrese el Ingrediente que quieres actualizar")
+            let Nnombre = prompt("Ingrese el nombre del Ingrediente que quieres actualizar");
+            let Ndescripcion = prompt("Ingrese la Descripcion del Ingrediente(Opcional,Dale enter para continuar");
+            categorias[cambio - 1]["nombre"] = Nnombre;
+            categorias[cambio - 1]["descripcion"] = Ndescripcion;
+            alert("Categoria Actualizado")
+        } else if (Popciones == "4") {
             let enu = categorias.length;
-            for(i = 0; i < enu; i ++){
+            for (i = 0; i < enu; i++) {
                 alert(
                     "Categoria N. " + (i + 1) + "\n" +
                     "Nombre: " + categorias[i]["nombre"] + "\n" +
                     "Descripcion: " + categorias[i]["descripcion"]
-                )}
-        }else{
+                )
+            }
+        } else {
             alert("Regresando al menu principal(Dar Enter para continuar):")
         }
     } else if (opciones == "3") {
@@ -207,36 +223,46 @@ while (booleanito == true) {
             let precio = prompt("Ingrese el Precio del Ingrediente");
             let stock = prompt("Ingrese la cantidad de stock que cuenta el Ingrediente");
             let confirmacion = prompt("Seguro que quieres agregar este Ingrediente? \n1. Si \n2. No\n");
-            if (confirmacion == "1"){
+            if (confirmacion == "1") {
                 ingredientes.push({
                     "nombre": nombre,
                     "descripcion": descripcion,
-                    "precio":precio,
-                    "stock":stock,
+                    "precio": precio,
+                    "stock": stock,
                 });
                 alert("El ingrediente fue guardado con exito")
-            }else if(confirmacion == "2"){
+            } else if (confirmacion == "2") {
                 alert("Ingrediente no agregado")
-            }else{
+            } else {
                 alert("Opcion incorrecta,Ingrediente no agregado \nRegresando al menu principal")
             }
-        }else if(Popciones == "2"){
+        } else if (Popciones == "2") {
             let elimi = prompt("Ingrese el numero del Ingrediente que deseas eliminar");
-            ingredientes.splice(elimi-1);
+            ingredientes.splice(elimi - 1);
             alert("Ingrediente Eliminado")
-        }else if(Popciones == "3"){
-            
-        }else if(Popciones =="4"){
+        } else if (Popciones == "3") {
+            let cambio = prompt("Ingrese el Ingrediente que quieres actualizar")
+            let Nnombre = prompt("Ingrese el nombre del Ingrediente que quieres actualizar");
+            let Ndescripcion = prompt("Ingrese la Descripcion del Ingrediente(Opcional,Dale enter para continuar");
+            let Nprecio = prompt("Ingrese el Precio del Ingrediente");
+            let Nstock = prompt("Ingrese la cantidad de stock que cuenta el Ingrediente");
+            hamgur[cambio - 1]["nombre"] = Nnombre;
+            hamgur[cambio - 1]["descripcion"] = Ndescripcion
+            hamgur[cambio - 1]["precio"] = Nprecio
+            hamgur[cambio - 1]["stock"] = Nstock
+            alert("Hamburguesa Actualizado")
+        } else if (Popciones == "4") {
             let enu = ingredientes.length;
-            for(i = 0; i < enu; i ++){
+            for (i = 0; i < enu; i++) {
                 alert(
                     "Ingrediente N. " + (i + 1) + "\n" +
                     "Nombre: " + ingredientes[i]["nombre"] + "\n" +
                     "Descripcion: " + ingredientes[i]["descripcion"] + "\n" +
                     "Precio: " + ingredientes[i]["precio"] + "\n" +
                     "Stock: " + ingredientes[i]["stock"]
-                )}
-        }else{
+                )
+            }
+        } else {
             alert("Regresando al menu principal(Dar Enter para continuar):")
         }
     } else if (opciones == "4") {
@@ -257,37 +283,45 @@ while (booleanito == true) {
             let nombre = prompt("Ingrese el nombre del nuevo Chef");
             let especialidad = prompt("Ingrese la especialidad del chef");
             let confirmacion = prompt("Seguro que quieres agregar este Chef? \n1. Si \n2. No\n");
-            if (confirmacion == "1"){
+            if (confirmacion == "1") {
                 chefs.push({
                     "nombre": nombre,
                     "especialidad": especialidad,
                 });
                 alert("El Chef fue guardado con exito")
-            }else if(confirmacion == "2"){
+            } else if (confirmacion == "2") {
                 alert("Chef no agregado")
-            }else{
+            } else {
                 alert("Opcion incorrecta,Chef no agregado \nRegresando al menu principal")
             }
-        }else if(Popciones == "2"){
+        } else if (Popciones == "2") {
             let elimi = prompt("Ingrese el numero del Ingrediente que deseas eliminar");
-            chefs.splice(elimi-1);
+            chefs.splice(elimi - 1);
             alert("Chef Eliminado")
-        }else if(Popciones == "3"){
-            
-        }else if(Popciones =="4"){
+        } else if (Popciones == "3") {
+            let cambio = prompt("Ingrese el Ingrediente que quieres actualizar")
+            let Nnombre = prompt("Ingrese el nombre del Ingrediente que quieres actualizar");
+            let Nespecialidad = prompt("Ingrese la Descripcion del Ingrediente(Opcional,Dale enter para continuar");
+            chefs[cambio - 1]["nombre"] = Nnombre;
+            chefs[cambio - 1]["descripcion"] = Nespecialidad;
+            alert("Chef Actualizado")
+        } else if (Popciones == "4") {
             let enu = chefs.length;
-            for(i = 0; i < enu; i ++){
+            for (i = 0; i < enu; i++) {
                 alert(
                     "Ingrediente N. " + (i + 1) + "\n" +
                     "Nombre: " + chefs[i]["nombre"] + "\n" +
                     "Especialidad: " + chefs[i]["especialidad"]
-                )}
-        }else{
+                )
+            }
+        } else {
             alert("Regresando al menu principal(Dar Enter para continuar):")
         }
-    } else if (opciones == "5"){
+    } else if (opciones == "5") {
         alert("Saliendo del Programa,Aqui estaremos para cualquier solicitud :)");
         booleanito = false;
+    } else {
+        alert("Opcion invalida\nIngrese una opcion numerica correcta")
     }
 }
 
