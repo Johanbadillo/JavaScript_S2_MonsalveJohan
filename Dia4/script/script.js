@@ -207,14 +207,14 @@ while (booleanito == true) {
             let nombre = prompt("Ingrese el nombre de la nueva Hamburguesa");
             let categoria = prompt("Ingrese la categoria de la hamburguesa");
             let ingredientes = prompt("Ingrese los ingredientes  de la hamburguesa(todos)");
-            let precio= prompt("Ingrese el precio de la hamburguesa");
+            let precio = prompt("Ingrese el precio de la hamburguesa");
             let chef = prompt("Ingrese el chef de la hamburguesa")
             let confirmacion = prompt("Seguro que quieres agregar esta Hamburguesa? \n1. Si \n2. No\n");
             if (confirmacion == "1") {
                 ingredientes.push({
                     "nombre": nombre,
                     "categoria": categoria,
-                    "ingredientes":ingredientes,
+                    "ingredientes": ingredientes,
                     "precio": precio,
                     "chef": chef,
                 });
@@ -233,7 +233,7 @@ while (booleanito == true) {
             let Nnombre = prompt("Ingrese el nombre de la Hamburguesa");
             let Ncategoria = prompt("Ingrese la categoria de la hamburguesa");
             let Ningredientes = prompt("Ingrese los ingredientes  de la hamburguesa(todos)");
-            let Nprecio= prompt("Ingrese el precio de la hamburguesa");
+            let Nprecio = prompt("Ingrese el precio de la hamburguesa");
             let Nchef = prompt("Ingrese el chef de la hamburguesa")
             hamgur[cambio - 1]["nombre"] = Nnombre;
             hamgur[cambio - 1]["descripcion"] = Ncategoria
@@ -286,7 +286,7 @@ while (booleanito == true) {
                 alert("Opcion incorrecta,Chef no agregado \nRegresando al menu principal")
             }
         } else if (Popciones == "2") {
-            let elimi = prompt("Ingrese el numero del Ingrediente que deseas eliminar");
+            let elimi = prompt("Ingrese el numero del chef que deseas eliminar");
             chefs.splice(elimi - 1);
             alert("Chef Eliminado")
         } else if (Popciones == "3") {
