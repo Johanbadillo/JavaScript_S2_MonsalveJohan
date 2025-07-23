@@ -290,9 +290,9 @@ while (booleanito == true) {
             chefs.splice(elimi - 1);
             alert("Chef Eliminado")
         } else if (Popciones == "3") {
-            let cambio = prompt("Ingrese el Ingrediente que quieres actualizar")
-            let Nnombre = prompt("Ingrese el nombre del Ingrediente que quieres actualizar");
-            let Nespecialidad = prompt("Ingrese la Descripcion del Ingrediente(Opcional,Dale enter para continuar");
+            let cambio = prompt("Ingrese el numero del chef que quieres actualizar")
+            let Nnombre = prompt("Ingrese el nombre del chef");
+            let Nespecialidad = prompt("Ingrese la especialidad del chef");
             chefs[cambio - 1]["nombre"] = Nnombre;
             chefs[cambio - 1]["descripcion"] = Nespecialidad;
             alert("Chef Actualizado")
