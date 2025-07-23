@@ -247,7 +247,7 @@ while (booleanito == true) {
                 alert(
                     "Ingrediente N. " + (i + 1) + "\n" +
                     "Nombre: " + hamgur[i]["nombre"] + "\n" +
-                    "Categorias: " + hamgur[i]["categorias"] + "\n" +
+                    "Categoria: " + hamgur[i]["categoria"] + "\n" +
                     "Ingredientes: " + hamgur[i]["ingredientes"] + "\n" +
                     "Precio: " + hamgur[i]["precio"] + "\n" +
                     "chef: " + hamgur[i]["chef"]
