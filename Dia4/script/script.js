@@ -154,7 +154,34 @@ while (booleanito == true) {
         \n==========================================="
         );
         if (Popciones == "1") {
-
+            let nombre = prompt("Ingrese el nombre de la nueva categoria");
+            let descripcion = prompt("Ingrese la Descripcion de la categoria");
+            let confirmacion = prompt("Seguro que quieres agregar esta Categoria? \n1. Si \n2. No\n");
+            if (confirmacion == "1"){
+                categorias.push({
+                    "nombre": nombre,
+                    "descripcion": descripcion,
+                });
+                alert("La Categoria fue guardado con exito")
+            }else if(confirmacion == "2"){
+                alert("Categoria no agregado")
+            }else{
+                alert("Opcion incorrecta,Categoria no agregado \nRegresando al menu principal")
+            }
+        }else if(Popciones == "2"){
+            let elimi = prompt("Ingrese el numero de la Categoria que deseas eliminar");
+            categorias.splice(elimi-1);
+            alert("Categoria Eliminada\nSi no deseas eliminar nada darle Enter")
+        }else if(Popciones == "3"){
+            
+        }else if(Popciones =="4"){
+            let enu = categorias.length;
+            for(i = 0; i < enu; i ++){
+                alert(
+                    "Categoria N. " + (i + 1) + "\n" +
+                    "Nombre: " + categorias[i]["nombre"] + "\n" +
+                    "Descripcion: " + categorias[i]["descripcion"]
+                )}
         }
     } else if (opciones == "3") {
         let Popciones = prompt(
@@ -171,7 +198,40 @@ while (booleanito == true) {
         \n==========================================="
         );
         if (Popciones == "1") {
-
+            let nombre = prompt("Ingrese el nombre del nuevo Ingrediente");
+            let descripcion = prompt("Ingrese la Descripcion del Ingrediente(Opcional,Dale enter para continuar");
+            let precio = prompt("Ingrese el Precio del Ingrediente");
+            let stock = prompt("Ingrese la cantidad de stock que cuenta el Ingrediente");
+            let confirmacion = prompt("Seguro que quieres agregar este Ingrediente? \n1. Si \n2. No\n");
+            if (confirmacion == "1"){
+                ingredientes.push({
+                    "nombre": nombre,
+                    "descripcion": descripcion,
+                    "precio":precio,
+                    "stock":stock,
+                });
+                alert("El ingrediente fue guardado con exito")
+            }else if(confirmacion == "2"){
+                alert("Ingrediente no agregado")
+            }else{
+                alert("Opcion incorrecta,Ingrediente no agregado \nRegresando al menu principal")
+            }
+        }else if(Popciones == "2"){
+            let elimi = prompt("Ingrese el numero del Ingrediente que deseas eliminar");
+            ingredientes.splice(elimi-1);
+            alert("Ingrediente Eliminado")
+        }else if(Popciones == "3"){
+            
+        }else if(Popciones =="4"){
+            let enu = ingredientes.length;
+            for(i = 0; i < enu; i ++){
+                alert(
+                    "Ingrediente N. " + (i + 1) + "\n" +
+                    "Nombre: " + ingredientes[i]["nombre"] + "\n" +
+                    "Descripcion: " + ingredientes[i]["descripcion"] + "\n" +
+                    "Precio: " + ingredientes[i]["precio"] + "\n" +
+                    "Stock: " + ingredientes[i]["stock"]
+                )}
         }
     } else if (opciones == "4") {
         let Popciones = prompt(
@@ -188,7 +248,34 @@ while (booleanito == true) {
         \n==========================================="
         );
         if (Popciones == "1") {
-
+            let nombre = prompt("Ingrese el nombre del nuevo Chef");
+            let especialidad = prompt("Ingrese la especialidad del chef");
+            let confirmacion = prompt("Seguro que quieres agregar este Chef? \n1. Si \n2. No\n");
+            if (confirmacion == "1"){
+                chefs.push({
+                    "nombre": nombre,
+                    "especialidad": especialidad,
+                });
+                alert("El Chef fue guardado con exito")
+            }else if(confirmacion == "2"){
+                alert("Chef no agregado")
+            }else{
+                alert("Opcion incorrecta,Chef no agregado \nRegresando al menu principal")
+            }
+        }else if(Popciones == "2"){
+            let elimi = prompt("Ingrese el numero del Ingrediente que deseas eliminar");
+            chefs.splice(elimi-1);
+            alert("Chef Eliminado")
+        }else if(Popciones == "3"){
+            
+        }else if(Popciones =="4"){
+            let enu = chefs.length;
+            for(i = 0; i < enu; i ++){
+                alert(
+                    "Ingrediente N. " + (i + 1) + "\n" +
+                    "Nombre: " + chefs[i]["nombre"] + "\n" +
+                    "Especialidad: " + chefs[i]["especialidad"]
+                )}
         }
     } else if (opciones == "5"){
         alert("Saliendo del Programa,Aqui estaremos para cualquier solicitud :)");
