@@ -38,23 +38,9 @@ let hamgur = [
     {
         "nombre": "Clásica",
         "categoria": "Clásica",
-        "ingredientes": ["Pan", "Carne de res", "Queso cheddar", "Lechuga", "Tomate", "Cebolla", "Mayonesa", "Ketchup"],
+        "ingredientes": "pan",
         "precio": 10,
         "chef": "ChefA"
-    },
-    {
-        "nombre": "Vegetariana",
-        "categoria": "Vegetariana",
-        "ingredientes": ["Pan integral", "Hamburguesa de lentejas", "Queso suizo", "Espinacas", "Cebolla morada", "Aguacate", "Mayonesa vegana"],
-        "precio": 8,
-        "chef": "ChefB"
-    },
-    {
-        "nombre": "Doble Carne",
-        "categoria": "Gourmet",
-        "ingredientes": ["Pan de sésamo", "Doble carne de res", "Queso cheddar", "Bacon", "Lechuga", "Cebolla caramelizada", "Salsa BBQ"],
-        "precio": 12,
-        "chef": "ChefC"
     }
 ];
 
@@ -127,8 +113,8 @@ while (booleanito == true) {
             ingredientes.splice(elimi - 1);
             alert("Ingrediente Eliminado")
         } else if (Popciones == "3") {
-            let cambio = prompt("Ingrese el Ingrediente que quieres actualizar")
-            let Nnombre = prompt("Ingrese el nombre del Ingrediente que quieres actualizar");
+            let cambio = prompt("Ingrese el numero del ingrediente que quieres actualizar")
+            let Nnombre = prompt("Ingrese el nombre del Ingrediente");
             let Ndescripcion = prompt("Ingrese la Descripcion del Ingrediente(Opcional,Dale enter para continuar");
             let Nprecio = prompt("Ingrese el Precio del Ingrediente");
             let Nstock = prompt("Ingrese la cantidad de stock que cuenta el Ingrediente");
@@ -185,8 +171,8 @@ while (booleanito == true) {
             categorias.splice(elimi - 1);
             alert("Categoria Eliminada\nSi no deseas eliminar nada darle Enter")
         } else if (Popciones == "3") {
-            let cambio = prompt("Ingrese el Ingrediente que quieres actualizar")
-            let Nnombre = prompt("Ingrese el nombre del Ingrediente que quieres actualizar");
+            let cambio = prompt("Ingrese el numero de la categoria que quieres actualizar")
+            let Nnombre = prompt("Ingrese el nombre de la categoria");
             let Ndescripcion = prompt("Ingrese la Descripcion del Ingrediente(Opcional,Dale enter para continuar");
             categorias[cambio - 1]["nombre"] = Nnombre;
             categorias[cambio - 1]["descripcion"] = Ndescripcion;
@@ -218,48 +204,53 @@ while (booleanito == true) {
         \n==========================================="
         );
         if (Popciones == "1") {
-            let nombre = prompt("Ingrese el nombre del nuevo Ingrediente");
-            let descripcion = prompt("Ingrese la Descripcion del Ingrediente(Opcional,Dale enter para continuar");
-            let precio = prompt("Ingrese el Precio del Ingrediente");
-            let stock = prompt("Ingrese la cantidad de stock que cuenta el Ingrediente");
-            let confirmacion = prompt("Seguro que quieres agregar este Ingrediente? \n1. Si \n2. No\n");
+            let nombre = prompt("Ingrese el nombre de la nueva Hamburguesa");
+            let categoria = prompt("Ingrese la categoria de la hamburguesa");
+            let ingredientes = prompt("Ingrese los ingredientes  de la hamburguesa(todos)");
+            let precio= prompt("Ingrese el precio de la hamburguesa");
+            let chef = prompt("Ingrese el chef de la hamburguesa")
+            let confirmacion = prompt("Seguro que quieres agregar esta Hamburguesa? \n1. Si \n2. No\n");
             if (confirmacion == "1") {
                 ingredientes.push({
                     "nombre": nombre,
-                    "descripcion": descripcion,
+                    "categoria": categoria,
+                    "ingredientes":ingredientes,
                     "precio": precio,
-                    "stock": stock,
+                    "chef": chef,
                 });
-                alert("El ingrediente fue guardado con exito")
+                alert("La hamburguesa fue guardado con exito")
             } else if (confirmacion == "2") {
-                alert("Ingrediente no agregado")
+                alert("Hamburguesa no agregado")
             } else {
-                alert("Opcion incorrecta,Ingrediente no agregado \nRegresando al menu principal")
+                alert("Opcion incorrecta,Hamburguesa no agregada\nRegresando al menu principal")
             }
         } else if (Popciones == "2") {
-            let elimi = prompt("Ingrese el numero del Ingrediente que deseas eliminar");
-            ingredientes.splice(elimi - 1);
-            alert("Ingrediente Eliminado")
+            let elimi = prompt("Ingrese el numero de la hamburguesa que deseas eliminar");
+            hamgur.splice(elimi - 1);
+            alert("Hamburguesa Eliminada")
         } else if (Popciones == "3") {
-            let cambio = prompt("Ingrese el Ingrediente que quieres actualizar")
-            let Nnombre = prompt("Ingrese el nombre del Ingrediente que quieres actualizar");
-            let Ndescripcion = prompt("Ingrese la Descripcion del Ingrediente(Opcional,Dale enter para continuar");
-            let Nprecio = prompt("Ingrese el Precio del Ingrediente");
-            let Nstock = prompt("Ingrese la cantidad de stock que cuenta el Ingrediente");
+            let cambio = prompt("Ingrese el numero de la hamburguesa que quieres actualizar")
+            let Nnombre = prompt("Ingrese el nombre de la Hamburguesa");
+            let Ncategoria = prompt("Ingrese la categoria de la hamburguesa");
+            let Ningredientes = prompt("Ingrese los ingredientes  de la hamburguesa(todos)");
+            let Nprecio= prompt("Ingrese el precio de la hamburguesa");
+            let Nchef = prompt("Ingrese el chef de la hamburguesa")
             hamgur[cambio - 1]["nombre"] = Nnombre;
-            hamgur[cambio - 1]["descripcion"] = Ndescripcion
+            hamgur[cambio - 1]["descripcion"] = Ncategoria
+            hamgur[cambio - 1]["ingredientes"] = Ningredientes
             hamgur[cambio - 1]["precio"] = Nprecio
-            hamgur[cambio - 1]["stock"] = Nstock
+            hamgur[cambio - 1]["chef"] = Nchef
             alert("Hamburguesa Actualizado")
         } else if (Popciones == "4") {
-            let enu = ingredientes.length;
+            let enu = hamgur.length;
             for (i = 0; i < enu; i++) {
                 alert(
                     "Ingrediente N. " + (i + 1) + "\n" +
-                    "Nombre: " + ingredientes[i]["nombre"] + "\n" +
-                    "Descripcion: " + ingredientes[i]["descripcion"] + "\n" +
-                    "Precio: " + ingredientes[i]["precio"] + "\n" +
-                    "Stock: " + ingredientes[i]["stock"]
+                    "Nombre: " + hamgur[i]["nombre"] + "\n" +
+                    "Categorias: " + hamgur[i]["categorias"] + "\n" +
+                    "Ingredientes: " + hamgur[i]["ingredientes"] + "\n" +
+                    "Precio: " + hamgur[i]["precio"] + "\n" +
+                    "chef: " + hamgur[i]["chef"]
                 )
             }
         } else {
