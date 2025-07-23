@@ -211,7 +211,7 @@ while (booleanito == true) {
             let chef = prompt("Ingrese el chef de la hamburguesa")
             let confirmacion = prompt("Seguro que quieres agregar esta Hamburguesa? \n1. Si \n2. No\n");
             if (confirmacion == "1") {
-                ingredientes.push({
+                hamgur.push({
                     "nombre": nombre,
                     "categoria": categoria,
                     "ingredientes": ingredientes,
