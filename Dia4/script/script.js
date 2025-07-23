@@ -72,5 +72,89 @@ let = chefs[
         "especialidad": "Gourmet"
     }
 ]
+let booleanito = true
+while (booleanito == true ){
+    let opciones = prompt(
+        "===========================================\
+    \n                               Hamburguesería\
+    \n===========================================\
+    \nSeleccione una opción:\
+    \n\
+    \n1. Ingresar al menu de Ingredientes\
+    \n2. Ingresar al menu de Categorias\
+    \n3. Ingresar al menu de Hamburguesas\
+    \n4. Ingresar al menu de Chefs\
+    \n5. Salir\
+    \n==========================================="
+    )
+    if(opciones == "1"){
+        let Popciones = prompt(
+            "===========================================\
+        \n                               Menu Ingredientes\
+        \n===========================================\
+        \nSeleccione una opción:\
+        \n\
+        \n1. Añadir nuevo Ingrediente\
+        \n2. Eliminar Ingrediente\
+        \n3. Actualizar Ingrediente\
+        \n4. Ver ingredientes\
+        \n5. Salir\
+        \n==========================================="
+        )
+        if (Popciones == "1"){
 
+        }
+    }else if(opciones == "2"){
+        let Popciones = prompt(
+            "===========================================\
+        \n                               Menu Categorias\
+        \n===========================================\
+        \nSeleccione una opción:\
+        \n\
+        \n1. Añadir nueva Categoria\
+        \n2. Eliminar Categoria\
+        \n3. Actualizar Categoria\
+        \n4. Ver Categoria\
+        \n5. Salir\
+        \n==========================================="
+        )
+        if (Popciones == "1"){
+
+        }
+    }else if(opciones == "3"){
+        let Popciones = prompt(
+            "===========================================\
+        \n                               Menu Hamburguesas\
+        \n===========================================\
+        \nSeleccione una opción:\
+        \n\
+        \n1. Añadir nueva Hamburguesa\
+        \n2. Eliminar Hamburguesa\
+        \n3. Actualizar Hamburguesa\
+        \n4. Ver Hamburguesas\
+        \n5. Salir\
+        \n==========================================="
+        )
+        if (Popciones == "1"){
+
+        }
+    }else if(opciones == "4"){
+        let Popciones = prompt(
+            "===========================================\
+        \n                               Menu Chefs\
+        \n===========================================\
+        \nSeleccione una opción:\
+        \n\
+        \n1. Añadir nuevo Chef\
+        \n2. Eliminar Chef\
+        \n3. Actualizar Chef\
+        \n4. Ver Chefs\
+        \n5. Salir\
+        \n==========================================="
+        )
+        if (Popciones == "1"){
+
+        }
+}
+}
 
