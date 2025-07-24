@@ -1,3 +1,6 @@
+hamb = {
+inicio: function () {
+
 let ingredientes = [
     {
         "nombre": "Pan",
@@ -366,4 +369,5 @@ while (booleanito == true) {
         alert("Opcion invalida\nIngrese una opcion numerica correcta");
     }
 }
-
+}
+}

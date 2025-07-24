@@ -1,4 +1,4 @@
-body{
+body {
     padding: 0;
     background: linear-gradient(to right, rgba(255, 165, 0, 1), rgba(255, 215, 0, 0.5));
     display: flex;
@@ -14,7 +14,8 @@ img {
     background: transparent;
     animation: saltitos 2s infinite;
 }
-.todo{
+
+.todo {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -32,10 +33,10 @@ img {
     }
 
     30% {
-        transform: translateY(-10px);
+        transform: translateY(-80px);
     }
 
     60% {
-        transform: translateY(-5px);
+        transform: translateY(-60px);
     }
 }
