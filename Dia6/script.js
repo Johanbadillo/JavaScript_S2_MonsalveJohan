@@ -13,7 +13,7 @@ function buscarPersonaje() {
     xhr.onload = function () {
       if (this.readyState == 4 && this.status == 200) {
         const data = JSON.parse(this.response);
-        for (let i = 0; i < data.results.length; i++) {
+        for (i = 0; i < data.results.length; i++) {
           let personaje = data.results[i];
           if (personaje.name.toLowerCase() === nombreBuscado) {
             let mensaje = 'Personaje encontrado:\n\n';
@@ -33,9 +33,10 @@ function buscarPersonaje() {
         }
       }
     };
+
     xhr.send();
   }
-
+  
   buscarEnPagina(paginaActual);
 }
 
