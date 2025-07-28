@@ -12,7 +12,7 @@ function buscarPersonaje() {
     xhr.onload = function () {
       if (this.readyState == 4 && this.status == 200) {
         const data = JSON.parse(this.response);
-        for (i = 0; i < data.results.legth; i++) {
+        for (i = 0; i < data.results.length; i++) {
           let personaje = data.results[i];
           if (personaje.name.toLowerCase() === nombreBuscado) {
             let mensaje = 'Personaje encontrado:\n\n';
@@ -30,10 +30,12 @@ function buscarPersonaje() {
           alert('No se encontró el personaje con el nombre "' + nombreBuscado + '".');
         }
       }
-      xhr.send();
-    }
-    buscarEnPagina(paginaActual);
+    };
+
+    xhr.send();
   }
+  
+  buscarEnPagina(paginaActual);
 }
 
 buscarPersonaje();
