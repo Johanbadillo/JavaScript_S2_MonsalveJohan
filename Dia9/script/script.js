@@ -6,6 +6,8 @@ const form = document.querySelector('.formulario');
 const input = document.querySelector('#busqueda');
 const buttonPrev = document.querySelector('.atras');
 const buttonNext = document.querySelector('.siguiente');
+const audioPokemon = document.querySelector('.chirridos');
+
 
 let searchPokemon = 1;
 
@@ -28,6 +30,7 @@ const renderPokemon = async (pokemon) => {
         pokemonName.innerHTML = data.name;
         pokemonNumber.innerHTML = data.id;
         pokemonImage.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default'];
+        audioPokemon.src = data.cries.latest;
         input.value = '';
         searchPokemon = data.id;
     } else {
