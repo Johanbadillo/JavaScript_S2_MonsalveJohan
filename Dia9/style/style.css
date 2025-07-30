@@ -22,8 +22,11 @@ body {
 .imgPokemon {
     position: absolute;
     top: 200px;
-    right: 160px;
+    right: 140px;
     height: 120px;
+    max-height: 180px; 
+    max-width: 180px; 
+    object-fit: contain;
 }
 
 .contenido h1 {
@@ -32,7 +35,7 @@ body {
     color: #aaa;
     top: 350px;
     right: 27%;
-    font-size: 2rem;
+    font-size: 1.6rem;
 }
 
 .contenido .nombre {
@@ -68,7 +71,7 @@ body {
 }
 
 .contenido button {
-    width: 500px;
+    width: 140px;
     padding: 4%;
     border: 2px solid #000;
     border-radius: 5px;
