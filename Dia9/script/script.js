@@ -10,9 +10,7 @@ const buttonNext = document.querySelector('.siguiente');
 let searchPokemon = 1;
 
 const fetchPokemon = async (pokemon) => {
-
     const APIResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
-
 
     if (APIResponse.status == 200) {
         const data = await APIResponse.json();
@@ -23,7 +21,6 @@ const fetchPokemon = async (pokemon) => {
 const renderPokemon = async (pokemon) => {
     pokemonName.innerHTML = 'Loading...';
     pokemonNumber.innerHTML = '';
-
     const data = await fetchPokemon(pokemon);
 
     if (data) {
@@ -31,7 +28,6 @@ const renderPokemon = async (pokemon) => {
         pokemonName.innerHTML = data.name;
         pokemonNumber.innerHTML = data.id;
         pokemonImage.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default'];
-        audioPokemon.src = data.cries.latest;
         input.value = '';
         searchPokemon = data.id;
     } else {
@@ -54,16 +50,8 @@ buttonPrev.addEventListener('click', () => {
 });
 
 buttonNext.addEventListener('click', () => {
-
     searchPokemon += 1;
     renderPokemon(searchPokemon);
-
-});
-
-document.document.querySelector('.formulario').addEventListener('keypress', function (event) {
-    if (event.key === 'Enter') {
-        Opciones();
-    }
 });
 
 renderPokemon(searchPokemon);
