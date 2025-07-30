@@ -16,10 +16,12 @@ body{
 .contenido{
     display: inline-block;
     position: relative;
+    top: 30px;
 }
 .imgPokemon{
-    position: relative;
-    top: 350px;
+    position: absolute;
+    top: 215px;
+    right: 160px;
     height: 120px;
 }
 
@@ -27,7 +29,7 @@ body{
     position: absolute;
     font-weight:600; 
     color: #aaa;
-    top: 63.3%;
+    top: 350px;
     right: 27%;
     font-size: 2rem;
 }
@@ -39,14 +41,13 @@ body{
 .contenido form{
     position: absolute;
     width: 100%;
-    top: 70%;
-    margin-top: 10px;
+    top: 420px;
 }
 
 .contenido input{
-    width: 70%;
+    width: 300px;
     padding: 4%;
-    margin-right: 40px;
+    margin-right: 30px;
     outline: black;
     border: 2px solid #333;
     border-radius: 5px;
@@ -56,14 +57,33 @@ body{
     box-shadow: -3px 4px 0 #888,-5px 7px 0 #333;
 }
 
+.botones{
+    display: flex;
+    position: absolute;
+    top: 530px;
+    width: 300px;
+    margin-left: 50px;
+    gap: 20px;
+}
+
 .contenido button{
-    width: 50%;
+    width: 500px;
     padding: 4%;
     border: 2px solid #000;
     border-radius: 5px;
-    font-size: clamp(8px,5vw,1rem);
+    font-size: 1rem;
     font-weight: 600;
     color: white;
     background-color: #444;
     box-shadow: -2px 3px 0 #222,-4px 6px #000;
+}
+
+.contenido button:hover{
+    cursor: pointer;
+    cursor:url('./../media/favicon-16x16.png'),auto;
+}
+
+.contenido button:active{
+    box-shadow: inset -4px 4px 0 #222;
+    font-size: 0.9rem;
 }
