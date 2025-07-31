@@ -1,12 +1,12 @@
-const pokemonName = document.querySelector('.nombre');
-const pokemonNumber = document.querySelector('#numero');
-const pokemonImage = document.querySelector('.imgPokemon');
+const pokemonName = document.getElementById('nombre');
+const pokemonNumber = document.getElementById('numero');
+const pokemonImage = document.getElementById('imgPokemon');
 
-const form = document.querySelector('.formulario');
-const input = document.querySelector('#busqueda');
-const buttonPrev = document.querySelector('.atras');
-const buttonNext = document.querySelector('.siguiente');
-const audioPokemon = document.querySelector('.chirridos');
+const form = document.getElementById('formulario');
+const input = document.getElementById('busqueda');
+const buttonPrev = document.getElementById('atras');
+const buttonNext = document.getElementById('siguiente');
+const audioPokemon = document.getElementById('chirridos');
 
 
 let searchPokemon = 1;
