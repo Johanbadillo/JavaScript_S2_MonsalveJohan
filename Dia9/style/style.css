@@ -83,7 +83,6 @@ body {
 }
 
 .contenido button:hover {
-    cursor: pointer;
     cursor: url('./../media/favicon-16x16.png'), auto;
 }
 
