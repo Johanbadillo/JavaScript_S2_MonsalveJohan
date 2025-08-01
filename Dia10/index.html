@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="shortcut icon" href="./media/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="./style/style.css">
 </head>
+
 <body>
     <div class="contenido">
         <div class="tituloPrincipal">
@@ -19,9 +21,30 @@
         </div>
         <div class="perfil">
             <img src="./media/fichas.png" alt="">
-            <button>Estadisticas</button>
+            <button id="botonEstadisticas">Estadisticas</button>
+        </div>
+        <div class="estadisticas" id="estadisticas">
+            <div class="contenidoModal">
+                <h2>Estadísticas</h2>
+                <div class="ver">
+                    <div class="info">
+                        <p>Victorias</p>
+                        <span>10</span>
+                    </div>
+                    <div class="info">
+                        <p>Derrotas</p>
+                        <span>5</span>
+                    </div>
+                    <div class="info">
+                        <p>Puntos Totales</p>
+                        <span>350</span>
+                    </div>
+                </div>
+                <button id="cerrarModal">Cerrar</button>
+            </div>
         </div>
     </div>
 </body>
 <script src="./script/script.js"></script>
+
 </html>
