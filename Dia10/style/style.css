@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: url(./../media/fondo.jpg) no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.contenido{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.contenido .tituloPrincipal{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.contenido .tituloPrincipal h1{
+    font-size: 5rem;
+    font-weight: 900;
+}
+
+.contenido .tituloPrincipal p{
+    font-size: 2.5rem;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: lighter;
+}
+
+.contenido .botones{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    position: relative;
+    top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.contenido .botones button{
+    padding: 20px;
+    margin: 10px;
+    border: 2px solid #646464;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background-color: #444;
+    box-shadow: -5px 5px 5px #000000;
+}
+
+.contenido .perfil{
+    position: relative;
+    width: 160px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: 150px;
+    top: -50px;
+}
+
+.contenido .perfil button{
+    padding: 20px;
+    margin: 10px;
+    border: 2px solid #646464;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background-color: #444;
+    box-shadow: -5px 5px 5px #000000;
+}
+
+.contenido button:active {
+    box-shadow: inset -4px 4px 0 #222;
+    font-size: 0.9rem;
+}
