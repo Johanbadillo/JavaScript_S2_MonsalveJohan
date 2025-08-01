@@ -1,18 +1,19 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
     background: url(./../../media/fondo2.jpg) no-repeat;
+    background-position: center;
     background-size: cover;
     min-height: 100vh;
 }
 
-.contenido{
+.contenido {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -22,16 +23,18 @@ body{
     border: 2px solid white;
     background-color: rgba(5, 5, 5, 0.555);
     margin-top: 50px;
-    padding: 40px 20px
+    padding: 40px 20px;
+    border-radius: 16px;
+    box-shadow: 0 0 20px white;
 }
 
-.contenido h1{
+.contenido h1 {
     font-size: 5rem;
     font-weight: 900;
     margin-bottom: 20px;
 }
 
-.contenido ul{
+.contenido ul {
     font-size: 1.8rem;
     list-style: none;
     line-height: 1.5;
@@ -39,11 +42,11 @@ body{
     padding: 0 20px;
 }
 
-.contenido ul li{
+.contenido ul li {
     margin-bottom: 10px;
 }
 
-.regreso{
+.regreso {
     display: flex;
     margin-right: auto;
     padding: 0 20px;
@@ -52,7 +55,7 @@ body{
     position: relative;
 }
 
-button{
+button {
     padding: 20px;
     border: 2px solid #646464;
     border-radius: 5px;
@@ -62,15 +65,97 @@ button{
     background-color: #444;
     box-shadow: -5px 5px 5px #000000;
     position: relative;
-    margin-right: 109px;
     cursor: pointer;
     transition: all 1.2s;
 }
-button:hover{
+
+button:hover {
     transform: scale(1.2);
 }
 
 button:active {
     box-shadow: inset -4px 4px 0 #222;
     font-size: 0.9rem;
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .contenido {
+        max-width: 85%;
+        margin: 40px auto 15px;
+        padding: 30px 20px;
+        border: 2px solid white;
+    }
+
+    .contenido h1 {
+        font-size: 4rem;
+        margin-bottom: 15px;
+    }
+
+    .contenido ul {
+        font-size: 1.6rem;
+        line-height: 1.4;
+        padding: 0 15px;
+    }
+
+    .contenido ul li {
+        margin-bottom: 8px;
+    }
+
+    .regreso {
+        align-content: center;
+        position: relative;
+        top: 10px;
+    }
+
+    button {
+        padding: 18px;
+        font-size: 0.95rem;
+        border: 2px solid #646464;
+    }
+
+    button:hover {
+        transform: scale(1.1);
+    }
+
+    button:active {
+        box-shadow: inset -3px 3px 0 #222;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body{
+        background:  url(./../../media/fondoCelRules.gif);
+        background-position: center;
+        background-size: cover;
+        transition: all 2s ease;
+    }
+    .contenido {
+        max-width: 95%;
+        margin: 20px auto 10px;
+        padding: 15px 10px;
+        background: #000000d6;
+    }
+
+    .contenido h1 {
+        font-size: 2.5rem;
+    }
+
+    .contenido ul {
+        font-size: 1.2rem;
+        padding: 0 5px;
+    }
+
+    .regreso {
+        justify-content: center;
+        padding: 0 10px;
+        top: 0px;
+        margin-bottom: 10px;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 0.8rem;
+    }
 }
