@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: url(./../../media/fondo2.jpg) no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.contenido{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    max-width: 800px;
+    margin: 50px auto 20px;
+    border: 2px solid white;
+    background-color: rgba(5, 5, 5, 0.555);
+    margin-top: 50px;
+    padding: 40px 20px
+}
+
+.contenido h1{
+    font-size: 5rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.contenido ul{
+    font-size: 1.8rem;
+    list-style: none;
+    line-height: 1.5;
+    text-align: left;
+    padding: 0 20px;
+}
+
+.contenido ul li{
+    margin-bottom: 10px;
+}
+
+.regreso{
+    display: flex;
+    margin-right: auto;
+    padding: 0 20px;
+    justify-content: flex-end;
+    top: -100px;
+    position: relative;
+}
+
+button{
+    padding: 20px;
+    border: 2px solid #646464;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background-color: #444;
+    box-shadow: -5px 5px 5px #000000;
+    position: relative;
+    margin-right: 109px;
+    cursor: pointer;
+    transition: all 1.2s;
+}
+button:hover{
+    transform: scale(1.2);
+}
+
+button:active {
+    box-shadow: inset -4px 4px 0 #222;
+    font-size: 0.9rem;
+}
