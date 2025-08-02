@@ -51,18 +51,21 @@ body {
     margin-bottom: 15px;
 }
 
-.contenido ul, .contenido ol {
+.contenido ul,
+.contenido ol {
     font-size: 1.8rem;
     list-style-position: outside;
     padding-left: 40px;
     line-height: 1.6;
 }
 
-.contenido ul li, .contenido ol li {
+.contenido ul li,
+.contenido ol li {
     margin-bottom: 10px;
 }
 
-.contenido ul ul, .contenido ol ul {
+.contenido ul ul,
+.contenido ol ul {
     font-size: 1.6rem;
     padding-left: 60px;
     margin-top: 10px;
@@ -122,12 +125,15 @@ button:active {
         font-size: 2rem;
     }
 
-    .contenido .regla p, .contenido ul, .contenido ol {
+    .contenido .regla p,
+    .contenido ul,
+    .contenido ol {
         font-size: 1.6rem;
         line-height: 1.4;
     }
 
-    .contenido ul ul, .contenido ol ul {
+    .contenido ul ul,
+    .contenido ol ul {
         font-size: 1.4rem;
         padding-left: 50px;
     }
@@ -175,12 +181,15 @@ button:active {
         font-size: 1.8rem;
     }
 
-    .contenido .regla p, .contenido ul, .contenido ol {
+    .contenido .regla p,
+    .contenido ul,
+    .contenido ol {
         font-size: 1.2rem;
         padding-left: 20px;
     }
 
-    .contenido ul ul, .contenido ol ul {
+    .contenido ul ul,
+    .contenido ol ul {
         font-size: 1.1rem;
         padding-left: 30px;
     }

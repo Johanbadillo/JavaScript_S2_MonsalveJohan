@@ -131,7 +131,6 @@ body{
     display: flex;
     justify-content: space-around; 
     margin-bottom: 20px;
-    box-shadow: 2px 2px 10px black;
 }
 
 .info {
@@ -139,6 +138,7 @@ body{
     padding: 10px;
     border-radius: 5px;
     width: 150px;
+    box-shadow: 0 0 20px black;
 }
 
 .info p {
@@ -152,5 +152,13 @@ body{
 }
 
 .contenidoModal button {
+    margin: 10px;
+    border: 2px solid #646464;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background-color: #444;
+    box-shadow: -5px 5px 5px #000000;
     padding: 15px
 }
