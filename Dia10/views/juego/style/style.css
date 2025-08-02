@@ -23,6 +23,7 @@ body {
     flex-direction: column;
     text-align: center;
     margin-top: 5vh;
+    margin-bottom: 5vh;
     width: 100vw;
     min-height: 100vh;
 }
@@ -119,7 +120,7 @@ body {
 
 .cartasOcultas {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, auto);
     justify-items: center;
     align-items: center;
     justify-content: center;
@@ -130,9 +131,9 @@ body {
 .contenido .final {
     display: none;
 }
+
 /*Modal*/
 .seleccion {
-    /*Cambiar a por defector fixed para que se efecute de primero*/
     display: fixed;
     flex-direction: column;
     position: fixed;
@@ -149,19 +150,19 @@ body {
     align-items: center;
 }
 
-.seleccion .titulo{
+.seleccion .titulo {
     display: flex;
     justify-content: center;
     align-content: center;
     align-items: center;
 }
 
-.seleccion h3{
+.seleccion h3 {
     width: 80%;
     font-size: 4rem;
 }
 
-.seleccion .btn{
+.seleccion .btn {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -185,7 +186,7 @@ body {
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.seleccion button:hover{
+.seleccion button:hover {
     transform: translateY(-10px);
 }
 
@@ -198,48 +199,15 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.resultado {
+    display: none;
+}
 
 
 
 @media (max-width: 480px) {
     .contenido a {
-        text-decoration: none;
         margin: 0;
-        color: white;
-        cursor: default;
         margin-left: auto;
         padding: 0;
     }
