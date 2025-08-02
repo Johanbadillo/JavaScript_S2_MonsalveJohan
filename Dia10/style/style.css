@@ -4,13 +4,13 @@
 }
 
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
     background: url(./../media/fondo.jpg) no-repeat;
@@ -21,24 +21,24 @@ body{
     font-family: nueva;
 }
 
-.contenido{
+.contenido {
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
-.contenido .tituloPrincipal{
+.contenido .tituloPrincipal {
     display: flex;
     flex-direction: column;
     margin-top: 40px;
 }
 
-.contenido .tituloPrincipal h1{
+.contenido .tituloPrincipal h1 {
     font-size: 5rem;
     font-weight: 900;
 }
 
-.contenido .tituloPrincipal p{
+.contenido .tituloPrincipal p {
     font-size: 2.5rem;
     width: 700px;
     margin-left: auto;
@@ -46,7 +46,11 @@ body{
     font-weight: lighter;
 }
 
-.contenido .botones{
+.contenido button{
+    transition: all 0.8s ease-out;
+}
+
+.contenido .botones {
     display: flex;
     flex-direction: column;
     width: 300px;
@@ -56,8 +60,7 @@ body{
     margin-right: auto;
 }
 
-
-.contenido .botones button{
+.contenido .botones button {
     padding: 20px;
     margin: 10px;
     width: 100%;
@@ -68,9 +71,15 @@ body{
     color: white;
     background-color: #444;
     box-shadow: -5px 5px 5px #000000;
+    cursor: pointer;
+    margin-bottom: 35px;
 }
 
-.contenido .perfil{
+.contenido ,.botones a{
+    cursor: default;
+}
+
+.contenido .perfil {
     position: relative;
     width: 160px;
     height: auto;
@@ -81,7 +90,7 @@ body{
     top: 70px;
 }
 
-.contenido .perfil button{
+.contenido .perfil button {
     padding: 20px;
     margin: 10px;
     border: 2px solid #646464;
@@ -91,6 +100,9 @@ body{
     color: white;
     background-color: #444;
     box-shadow: -5px 5px 5px #000000;
+}
+.contenido button:hover{
+    transform: scale(1.2);
 }
 
 .contenido button:active {
@@ -105,18 +117,18 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); 
-    z-index: 100; 
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 100;
 }
 
 .contenidoModal {
-    background-color: #373737; 
+    background-color: #373737;
     width: 600px;
-    margin: 100px auto; 
+    margin: 100px auto;
     padding: 20px;
-    border: 2px solid #646464; 
+    border: 2px solid #646464;
     border-radius: 5px;
-    box-shadow: -5px 5px 5px #000000; 
+    box-shadow: -5px 5px 5px #000000;
     text-align: center;
 }
 
@@ -129,7 +141,7 @@ body{
 
 .ver {
     display: flex;
-    justify-content: space-around; 
+    justify-content: space-around;
     margin-bottom: 20px;
 }
 
