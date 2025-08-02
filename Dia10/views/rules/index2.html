@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reglas de juego</title>
+    <link rel="shortcut icon" href="./media/logoRules.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+    <div class="contenido">
+        <h1>Reglas de Carta Alta o Baja</h1>
+        <section class="regla">
+            <h2>1. Objetivo del juego</h2>
+            <p>Predecir si la carta que eliges será mayor ("alta") o menor ("baja") que la carta del crupier, sin
+                conocer inicialmente ninguna carta.</p>
+        </section>
+        <section class="regla">
+            <h2>2. Configuración inicial</h2>
+            <ul>
+                <li>Crupier: 1 carta boca abajo (oculta).</li>
+                <li>Jugador: 1 carta boca abajo (oculta al inicio).</li>
+                <li>Mesa: 4 cartas boca abajo que el jugador puede elegir para jugar.</li>
+                <li>Todas las cartas están ocultas al comenzar la partida.</li>
+            </ul>
+        </section>
+        <section class="regla">
+            <h2>3. Valores de las cartas</h2>
+            <ul>
+                <li>As = 1</li>
+                <li>2 a 10 = Su valor numérico</li>
+                <li>Jota (J) = 11</li>
+                <li>Reina (Q) = 12</li>
+                <li>Rey (K) = 13</li>
+            </ul>
+        </section>
+        <section class="regla">
+            <h2>4. Desarrollo de la partida</h2>
+            <ol>
+                <li><strong>Elección de predicción</strong>: El jugador selecciona 'Alta' (predice que su carta será
+                    mayor que la del crupier) o 'Baja' (predice que será menor). Tras elegir, se revela la carta del
+                    jugador, pero las 4 cartas de la mesa y la del crupier permanecen ocultas.</li>
+                <li><strong>Elegir una carta</strong>: El jugador decide si:
+                    <ul>
+                        <li>Juega su carta visible (ya revelada).</li>
+                        <li>Arriesga eligiendo una de las 4 cartas boca abajo de la mesa (sin saber su valor).</li>
+                    </ul>
+                </li>
+                <li><strong>Resolución</strong>:
+                    <ul>
+                        <li>Se revela la carta del crupier.</li>
+                        <li>Si el jugador eligió una carta de la mesa, esa carta también se revela.</li>
+                        <li>Se comparan los valores numéricos de la carta del jugador y la del crupier.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+        <section class="regla">
+            <h2>5. Determinación del ganador</h2>
+            <ul>
+                <li><strong>Si el jugador eligió 'Alta'</strong>: Gana si su carta es mayor que la del crupier. Pierde
+                    si es menor o igual.</li>
+                <li><strong>Si el jugador eligió 'Baja'</strong>: Gana si su carta es menor que la del crupier. Pierde
+                    si es mayor o igual.</li>
+                <li><strong>Empates</strong>: Si las cartas tienen el mismo valor, el jugador pierde.</li>
+            </ul>
+        </section>
+        <section class="regla">
+            <h2>6. Reinicio</h2>
+            <p>Tras cada ronda, el jugador puede iniciar una nueva partida, generando una nueva baraja y repartiendo
+                nuevas cartas (todas ocultas).</p>
+        </section>
+    </div>
+    <div class="regreso">
+        <a href="./../juego/index.html"><button>Regresar</button></a>
+    </div>
+</body>
+
+</html>
