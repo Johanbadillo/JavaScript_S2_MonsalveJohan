@@ -7,7 +7,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: url(./../../media/fondo2.jpg) no-repeat;
+    background: url(./../media/fondo2.jpg) no-repeat;
     background-position: center;
     background-size: cover;
     min-height: 100vh;
@@ -159,7 +159,7 @@ button:active {
 
 @media (max-width: 480px) {
     body {
-        background: url(./../../media/fondoCelRules.gif);
+        background: url(.//../media/fondoCelRules.gif);
         background-position: center;
         background-size: cover;
         transition: all 2s ease;
