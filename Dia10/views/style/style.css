@@ -18,32 +18,59 @@ body {
     flex-direction: column;
     text-align: center;
     color: white;
-    max-width: 800px;
+    width: 1200px;
     margin: 50px auto 20px;
     border: 2px solid white;
     background-color: rgba(5, 5, 5, 0.555);
-    margin-top: 50px;
     padding: 40px 20px;
     border-radius: 16px;
-    box-shadow: 0 0 20px white;
+    box-shadow: 0 0 20px white, 0px 0px 20px 2px rgb(253, 253, 253) inset;
 }
 
 .contenido h1 {
     font-size: 5rem;
     font-weight: 900;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
-.contenido ul {
-    font-size: 1.8rem;
-    list-style: none;
-    line-height: 1.5;
+.contenido .regla {
+    margin-bottom: 30px;
     text-align: left;
-    padding: 0 20px;
 }
 
-.contenido ul li {
+.contenido .regla h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #e0e0e0;
+}
+
+.contenido .regla p {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.contenido ul, .contenido ol {
+    font-size: 1.8rem;
+    list-style-position: outside;
+    padding-left: 40px;
+    line-height: 1.6;
+}
+
+.contenido ul li, .contenido ol li {
     margin-bottom: 10px;
+}
+
+.contenido ul ul, .contenido ol ul {
+    font-size: 1.6rem;
+    padding-left: 60px;
+    margin-top: 10px;
+}
+
+.contenido strong {
+    color: #ffffff;
+    font-weight: 900;
 }
 
 .regreso {
@@ -78,7 +105,6 @@ button:active {
     font-size: 0.9rem;
 }
 
-
 @media (min-width: 768px) and (max-width: 1024px) {
     .contenido {
         max-width: 85%;
@@ -89,29 +115,30 @@ button:active {
 
     .contenido h1 {
         font-size: 4rem;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
     }
 
-    .contenido ul {
+    .contenido .regla h2 {
+        font-size: 2rem;
+    }
+
+    .contenido .regla p, .contenido ul, .contenido ol {
         font-size: 1.6rem;
         line-height: 1.4;
-        padding: 0 15px;
     }
 
-    .contenido ul li {
-        margin-bottom: 8px;
+    .contenido ul ul, .contenido ol ul {
+        font-size: 1.4rem;
+        padding-left: 50px;
     }
 
     .regreso {
-        align-content: center;
-        position: relative;
         top: 10px;
     }
 
     button {
         padding: 18px;
         font-size: 0.95rem;
-        border: 2px solid #646464;
     }
 
     button:hover {
@@ -125,32 +152,43 @@ button:active {
 }
 
 @media (max-width: 480px) {
-    body{
-        background:  url(./../../media/fondoCelRules.gif);
+    body {
+        background: url(./../../media/fondoCelRules.gif);
         background-position: center;
         background-size: cover;
         transition: all 2s ease;
     }
+
     .contenido {
         max-width: 95%;
         margin: 20px auto 10px;
         padding: 15px 10px;
-        background: #000000d6;
+        background: #00000076;
     }
 
     .contenido h1 {
         font-size: 2.5rem;
+        margin-bottom: 15px;
     }
 
-    .contenido ul {
+    .contenido .regla h2 {
+        font-size: 1.8rem;
+    }
+
+    .contenido .regla p, .contenido ul, .contenido ol {
         font-size: 1.2rem;
-        padding: 0 5px;
+        padding-left: 20px;
+    }
+
+    .contenido ul ul, .contenido ol ul {
+        font-size: 1.1rem;
+        padding-left: 30px;
     }
 
     .regreso {
         justify-content: center;
         padding: 0 10px;
-        top: 0px;
+        top: 0;
         margin-bottom: 10px;
     }
 
