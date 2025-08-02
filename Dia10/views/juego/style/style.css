@@ -21,12 +21,14 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-bottom: 50px;
+    margin-top: 5vh;
+    width: 100vw;
+    min-height: 100vh;
 }
 
-.titulo{
+.titulo {
     font-size: 3.5rem;
-    margin: 30px;
+    margin: 3vw;
     color: white;
 }
 
@@ -38,28 +40,32 @@ body {
 
 .contenido .rules {
     display: flex;
-    padding: 20px;
+    padding: 2vw;
     flex-direction: column;
     position: relative;
-    top: -70px;
     margin-left: auto;
-    width: 240px;
+    width: 24vw;
+    min-width: 180px;
+    max-width: 300px;
     height: 0;
     color: white;
     font-family: nueva;
 }
 
 .contenido .rules img {
-    width: 200px;
+    width: 18vw;
+    min-width: 120px;
+    max-width: 200px;
     cursor: pointer;
 }
 
-.contenido .rules img:hover {
+.contenido .rules:hover {
     animation: saltos 0.8s ease-in-out infinite;
 }
 
 .contenido .rules h1 {
     cursor: pointer;
+    font-size: 2vw;
 }
 
 @keyframes saltos {
@@ -78,51 +84,62 @@ body {
     display: none;
 }
 
-.contenido .crupier{
-    margin-bottom: 100px;
+.contenido .crupier {
+    margin-bottom: 10vh;
 }
 
-.contenido .crupier,.jugador {
-    font-size: 3rem;
+.contenido .jugador {
+    margin-bottom: 5vh;
+}
+
+.contenido .crupier,
+.jugador {
+    font-size: 3vw;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    top: -40px;
-    margin-right: 150px;
+    top: -4vh;
+    margin-right: 10vw;
 }
 
-.contenido .crupier h2,.jugador h2{
-    font-size: 3rem;
+.contenido .crupier h2,
+.jugador h2 {
+    font-size: 3vw;
     color: white;
-    margin-right: 50px;
+    margin-right: 5vw;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .contenido .crupier img,
 .jugador img,
 .cartasOcultas img {
-    height: 200px;
+    height: 20vw;
+    min-height: 100px;
+    max-height: 200px;
 }
 
 .cartasOcultas {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(4, 1fr);
     justify-items: center;
     align-items: center;
     justify-content: center;
     align-content: center;
-    gap: 50px;
+    gap: 5vw;
 }
-
-
-
-
-
-
-
-
 
 .contenido .final {
     display: none;
+}
+
+@media (max-width: 480px) {
+    .contenido a {
+        text-decoration: none;
+        margin: 0;
+        color: white;
+        cursor: default;
+        margin-left: auto;
+        padding: 0;
+    }
 }
