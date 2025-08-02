@@ -12,7 +12,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: url(./../media/fondo2.jpg) no-repeat;
+    background: url(./../media/fondo2.jpg) no-repeat center center fixed;
     background-size: cover;
     min-height: 100vh;
 }
@@ -41,6 +41,7 @@ body {
     padding: 20px;
     flex-direction: column;
     position: relative;
+    top: -70px;
     margin-left: auto;
     width: 240px;
     height: 0;
