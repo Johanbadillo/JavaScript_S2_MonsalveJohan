@@ -132,7 +132,8 @@ body {
 }
 /*Modal*/
 .seleccion {
-    display: flex;
+    /*Cambiar a por defector fixed para que se efecute de primero*/
+    display: fixed;
     flex-direction: column;
     position: fixed;
     top: 0;
@@ -169,7 +170,7 @@ body {
 
 .seleccion button {
     margin: 10px;
-    border: 2px solid #646464;
+    border: 2px solid #ffffff62;
     border-radius: 5px;
     font-size: 1rem;
     font-weight: 600;
@@ -180,11 +181,58 @@ body {
     width: 30vw;
     max-width: 300px;
     min-height: 100px;
+    position: relative;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .seleccion button:hover{
     transform: translateY(-10px);
 }
+
+.seleccion button:active {
+    color: aqua;
+    box-shadow: inset -4px 4px 0 #222222;
+    font-size: 0.9rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 480px) {
     .contenido a {
