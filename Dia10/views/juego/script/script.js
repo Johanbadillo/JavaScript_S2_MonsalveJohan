@@ -94,7 +94,6 @@ for (let i = 0; i < 4; i++) {
     });
 }
 
-
 reinicio.addEventListener('click', () => {
     modalResultado.style.display = 'none';
     seleccion.style.display = 'flex';
