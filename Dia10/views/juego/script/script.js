@@ -2,40 +2,36 @@ let deckId = null;
 let cartaJugador = null;
 let cartaCrupier = null;
 let cartasOcultas = null;
+let prediccion = null;
 let victorias = 0;
 let derrotas = 0;
 
 const alta = document.getElementById('alta');
 const baja = document.getElementById('baja');
-const btn = document.getElementById('seleccion')
+const seleccion = document.getElementById('seleccion');
+const cartaCrupierImg = document.getElementById('cartaCrupier');
+const cartaJugadorImg = document.getElementById('cartaJugador');
+const modalResultado = document.getElementById('modalResultado');
+const mensajeResultado = document.getElementById('mensajeResultado');
+const cerrarModal = document.querySelector('.cerrar');
+const reinicio = document.getElementById('reinicio');
+const volverMenu = document.getElementById('volverMenu');
 
-function empezar() {
-    btn.style.display = 'none';
+function defValores(valor) {
+    if (valor === "ACE") return 1;
+    if (valor === "JACK") return 11;
+    if (valor === "QUEEN") return 12;
+    if (valor === "KING") return 13;
+    return parseInt(valor);
 }
 
-alta.addEventListener('click', empezar);
-baja.addEventListener('click', empezar);
-
-
-
-
-
-function defValores(valores) {
-    if (valores === "ACE") return 1;
-    if (valores === "JACK") return 11;
-    if (valores === "QUEEN") return 12;
-    if (valores === "KING") return 13;
-    return parseInt(valores)
-}
-
-
-function llamar() {
+function llamar(url, callback) {
     const xhr = new XMLHttpRequest();
     xhr.open("GET", url, true);
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
-            const daticos = JSON.parse(xhr.responseText);
-            cartas(daticos);
+            const data = JSON.parse(xhr.responseText);
+            callback(data);
         }
     };
     xhr.send();
@@ -43,63 +39,79 @@ function llamar() {
 
 function inicio() {
     const url = `https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1`;
-    console.log(url)
-    llamar(url, function (daticos) {
-        deckId = daticos.deck_Id;
-        console.log(daticos);
-        console.log(deckId);
-
-        llamar("https://deckofcardsapi.com/api/deck/" + deckId + "/draw/?count=6", function (data) {
+    llamar(url, function (data) {
+        deckId = data.deck_id;
+        llamar(`https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=6`, function (data) {
             cartaCrupier = data.cards[0];
             cartaJugador = data.cards[1];
             cartasOcultas = data.cards.slice(2, 6);
-        })
-    })
+            cartaJugadorImg.src = cartaJugador.image;
+            cartaCrupierImg.src = './media/prueba.png';
+            for (let i = 0; i < cartasOcultas.length; i++) {
+                document.getElementById(`carta${i + 1}`).src = './media/prueba.png';
+            }
+        });
+    });
 }
 
 function elegir(tipo) {
-    apuesta = tipo;
-    document.getElementById("cartaJugador").scr = cartaJugador.image;
-    document.getElementById("alta"), disabled = true;
-    document.getElementById("baja"), disabled = true;
+    prediccion = tipo;
+    seleccion.style.display = 'none';
+    alta.disabled = true;
+    baja.disabled = true;
+    inicio();
 }
 
 function jugar(carta, indice) {
     let valorJugador = defValores(carta.value);
     let valorCrupier = defValores(cartaCrupier.value);
-    document.getElementById("cartaCrupier").scr = cartaCrupier.image;
     if (indice >= 0) {
-        document.getElementById("cartaMesa" + (indice + 1)).src = carta.image;
+        document.getElementById(`carta${indice + 1}`).src = carta.image;
     }
+    cartaCrupierImg.src = cartaCrupier.image;
     let resultado = "";
     if (prediccion === "alta" && valorJugador > valorCrupier) {
-        resultado = "¡Ganaste! Tu carta (" + valorJugador + ") es mayor que la del crupier (" + valorCrupier + ")";
+        resultado = `¡Ganaste! Tu carta (${valorJugador}) es mayor que la del crupier (${valorCrupier})`;
+        victorias++;
     } else if (prediccion === "baja" && valorJugador < valorCrupier) {
-        resultado = "¡Ganaste! Tu carta (" + valorJugador + ") es menor que la del crupier (" + valorCrupier + ")";
+        resultado = `¡Ganaste! Tu carta (${valorJugador}) es menor que la del crupier (${valorCrupier})`;
+        victorias++;
     } else {
-        resultado = "Perdiste. Tu carta (" + valorJugador + ") no cumple con tu predicción contra la del crupier (" + valorCrupier + ")";
+        resultado = `Perdiste. Tu carta (${valorJugador}) no cumple con tu predicción contra la del crupier (${valorCrupier})`;
+        derrotas++;
     }
-    document.getElementById("resultado").innerText = resultado;
+    mensajeResultado.innerText = resultado;
+    modalResultado.style.display = "block";
 }
 
-document.getElementById("jugarAlta").addEventListener("click", function () {
-    elegirPrediccion("alta");
+alta.addEventListener('click', () => elegir('alta'));
+baja.addEventListener('click', () => elegir('baja'));
+
+cartaJugadorImg.addEventListener('click', () => jugar(cartaJugador, -1));
+for (let i = 0; i < 4; i++) {
+    document.getElementById(`carta${i + 1}`).addEventListener('click', () => {
+        jugar(cartasOcultas[i], i);
+    });
+}
+
+
+reinicio.addEventListener('click', () => {
+    modalResultado.style.display = 'none';
+    seleccion.style.display = 'flex';
+    alta.disabled = false;
+    baja.disabled = false;
+    cartaCrupierImg.src = './media/prueba.png';
+    cartaJugadorImg.src = './media/prueba.png';
+    for (let i = 0; i < 4; i++) {
+        document.getElementById(`carta${i + 1}`).src = './media/prueba.png';
+    }
+    deckId = null;
+    cartaJugador = null;
+    cartaCrupier = null;
+    cartasOcultas = null;
+    prediccion = null;
 });
-document.getElementById("jugarBaja").addEventListener("click", function () {
-    elegirPrediccion("baja");
-});
-document.getElementById("cartaJugador").addEventListener("click", function () {
-    jugarCarta(cartaJugador, -1);
-});
-document.getElementById("cartaMesa1").addEventListener("click", function () {
-    jugarCarta(cartasMesa[0], 0);
-});
-document.getElementById("cartaMesa2").addEventListener("click", function () {
-    jugarCarta(cartasMesa[1], 1);
-});
-document.getElementById("cartaMesa3").addEventListener("click", function () {
-    jugarCarta(cartasMesa[2], 2);
-});
-document.getElementById("cartaMesa4").addEventListener("click", function () {
-    jugarCarta(cartasMesa[3], 3);
+
+volverMenu.addEventListener('click', () => {
+    window.location.href = './../../index.html';
 });
