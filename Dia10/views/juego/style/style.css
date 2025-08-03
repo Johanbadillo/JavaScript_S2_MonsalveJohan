@@ -34,6 +34,10 @@ body {
     color: white;
 }
 
+.titulo h3{
+    text-shadow: 5px 5px 3px rgb(0, 97, 16);
+}
+
 .contenido a {
     text-decoration: none;
     color: white;
@@ -52,6 +56,7 @@ body {
     height: 0;
     color: white;
     font-family: nueva;
+    animation: saltos 0.8s ease-in-out infinite;
 }
 
 .contenido .rules img {
@@ -59,10 +64,6 @@ body {
     min-width: 120px;
     max-width: 200px;
     cursor: pointer;
-}
-
-.contenido .rules:hover {
-    animation: saltos 0.8s ease-in-out infinite;
 }
 
 .contenido .rules h1 {
@@ -172,12 +173,13 @@ body {
     margin: 10px;
     border: 2px solid #ffffff62;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: white;
     background-color: #444;
     box-shadow: -5px 5px 5px #000000;
     padding: 40px;
+    text-shadow: 5px 0 2px rgb(0, 61, 10);
     width: 30vw;
     max-width: 300px;
     min-height: 100px;
@@ -192,7 +194,7 @@ body {
 .seleccion button:active {
     color: aqua;
     box-shadow: inset -4px 4px 0 #222222;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
 }
 
 /*modal de resultado */
@@ -209,28 +211,22 @@ body {
 }
 
 .modal-contenido {
-    background-color: #fefefe;
+    background-color: #1f1f1f;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
+    box-shadow: 0 0 100px -50px white;
     width: 80%;
     max-width: 500px;
     text-align: center;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.cerrar {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.cerrar:hover,
-.cerrar:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+.modal-contenido p{
+    font-size: 2rem;
+    color: whitesmoke;
+    font-weight: 700;
+    text-shadow: 3px 3px 2px rgb(0, 97, 16);
 }
 
 .modal-botones {
@@ -241,23 +237,29 @@ body {
 }
 
 .modal-botones button {
+    margin: 10px;
     border: 2px solid #ffffff62;
     border-radius: 5px;
     font-size: 1rem;
     font-weight: 600;
     color: white;
     background-color: #444;
-    padding: 10px 20px;
+    box-shadow: -5px 5px 5px #000000;
+    width: 30vw;
+    max-width: 200px;
+    min-height: 80px;
+    position: relative;
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .modal-botones button:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
 }
 
 .modal-botones button:active {
     color: aqua;
     box-shadow: inset -4px 4px 0 #222222;
+    font-size: 0.9rem;
 }
 
 @media (max-width: 480px) {
