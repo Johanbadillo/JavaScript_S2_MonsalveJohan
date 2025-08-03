@@ -1,13 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style/style2.css">
 </head>
+
 <body>
-    
+    <div class="juego" id="juego">
+        <h1>Juego de Cartas rapidas Cuantas veces le puedes ganar al crupier <br/> <span> venga y apueste con tus amigos vcuantas</span></h1>
+        <div class="contenedor">
+            <div class="cartaCrupier">
+                <h2>crupier</h2>
+                <img src="./media/prueba.png" alt="crupier">
+            </div>
+            <div class="cartaJugador">
+                <h2>Jugador</h2>
+                <img src="./media/prueba.png" alt="Jugador">
+            </div>
+        </div>
+        <button class="reiniciar" id="reinicar">Reinicar</button>
+    </div>
+
+    <div class="seleccion">
+        <div class="contenidoPrediccion">
+            <h2>predice si tu carta sera mayor o menor que la del crupier</h2>
+            <p>¿Carta Alta o Carta Baja? Cual es tu decision</p>
+            <button class="alta" id="alta">Alta</button>
+            <button class="baja" id="baja">Baja</button>
+        </div>
+    </div>
+
+    <div class="resultado">
+        <div class="contenidoResultado">
+            <h2>Resultado</h2>
+            <p id="mensajeResultado">sdafdfuiohnoifam</p>
+            <button>Cerrar</button>
+        </div>
+    </div>
 </body>
 <script src="./script/script2.js"></script>
+
 </html>
