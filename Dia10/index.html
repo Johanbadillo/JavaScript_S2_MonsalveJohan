@@ -16,7 +16,7 @@
             <p>Preparado para venir a disfrutar y pasar a la mejor sensacion</p>
         </div>
         <div class="botones">
-            <a href="./views/juego/index.html"><button>JUGAR</button></a>
+            <button id="botonJugar">JUGAR</button>
             <a href="./views/rules/index.html"><button>RULES</button></a>
         </div>
         <div class="perfil">
@@ -24,7 +24,7 @@
             <button id="botonEstadisticas">Estadisticas</button>
         </div>
         <div class="estadisticas" id="estadisticas">
-            <div class="contenidoModal">
+            <div class="contenidoEst">
                 <h1>Hola! *****</h1>
                 <h2>Estadísticas</h2>
                 <div class="ver">
@@ -41,17 +41,23 @@
                         <span>350</span>
                     </div>
                 </div>
-                <button id="cerrarModal">Cerrar</button>
+                <button id="cerrarEst">Cerrar</button>
             </div>
         </div>
-        <div class="Qjuego">
-            <div class="juegoRapido">
-                <h3>VIviras una gran experiencia rapida</h3>
-                <button>ENTRAR</button>
-            </div>
-            <div class="clasico">
-                <h3>VIviras una gran experiencia clasica</h3>
-                <button>ENTRAR</button>
+        <div class="juego" id="juego">
+            <div class="contenidoJ">
+                <h1 class="tituloJuego">Selecciona tu modo de juego</h1>
+                <div class="opciones">
+                    <div class="juegoRapido">
+                        <h3>Vivirás una gran experiencia rápida</h3>
+                        <a href="./views/juego/index.html"><button class="botonJuego rapido">JUEGO RÁPIDO</button></a>
+                    </div>
+                    <div class="clasico">
+                        <h3>Vivirás una gran experiencia clásica</h3>
+                        <a href="./views/juego/index.html"><button class="botonJuego clasico">CLÁSICO</button></a>
+                    </div>
+                </div>
+                <button id="cerrarJuego">Cerrar</button>
             </div>
         </div>
     </div>

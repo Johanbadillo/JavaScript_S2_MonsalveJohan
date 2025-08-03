@@ -1,14 +1,27 @@
 const botonEstadisticas = document.getElementById('botonEstadisticas');
-const modalEstadisticas = document.getElementById('estadisticas');
-const cerrarModal = document.getElementById('cerrarModal');
+const estadisticas = document.getElementById('estadisticas');
+const cerrarEst = document.getElementById('cerrarEst');
+const botonJugar = document.getElementById('botonJugar');
+const juego = document.getElementById('juego');
+const cerrarJuego = document.getElementById('cerrarJuego');
 
-function mostrarModal() {
-    modalEstadisticas.style.display = 'block';
+function mostrarEst() {
+    estadisticas.style.display = 'block';
 }
 
-function ocultarModal() {
-    modalEstadisticas.style.display = 'none';
+function ocultarEst() {
+    estadisticas.style.display = 'none';
 }
 
-botonEstadisticas.addEventListener('click', mostrarModal);
-cerrarModal.addEventListener('click', ocultarModal);
+function mostrarJ() {
+    juego.style.display = 'block';
+}
+
+function ocultarJ() {
+    juego.style.display = 'none';
+}
+
+botonEstadisticas.addEventListener('click', mostrarEst);
+cerrarEst.addEventListener('click', ocultarEst);
+botonJugar.addEventListener('click', mostrarJ);
+cerrarJuego.addEventListener('click', ocultarJ);
