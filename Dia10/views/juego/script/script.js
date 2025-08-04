@@ -72,13 +72,12 @@ function jugar(carta, indice) {
     let resultado = "";
     if (prediccion === "alta" && valorJugador > valorCrupier) {
         resultado = `¡Ganaste! Tu carta (${valorJugador}) es mayor que la del crupier (${valorCrupier})`;
-        victorias++;
     } else if (prediccion === "baja" && valorJugador < valorCrupier) {
         resultado = `¡Ganaste! Tu carta (${valorJugador}) es menor que la del crupier (${valorCrupier})`;
-        victorias++;
-    } else {
-        resultado = `Perdiste. Tu carta (${valorJugador}) no cumple con tu predicción contra la del crupier (${valorCrupier})`;
-        derrotas++;
+    }else if(prediccion === "alta" && valorJugador < valorCrupier){
+        resultado = `¡Perdiste! Tu carta (${valorJugador}) es menor que la del crupier (${valorCrupier})`;
+    }else if(prediccion === "baja" && valorJugador > valorCrupier){
+        resultado = `¡Perdiste! Tu carta (${valorJugador}) es mayor que la del crupier (${valorCrupier})`;
     }
     mensajeResultado.innerText = resultado;
     modalResultado.style.display = "block";
