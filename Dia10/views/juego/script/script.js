@@ -78,6 +78,8 @@ function jugar(carta, indice) {
         resultado = `¡Perdiste! Tu carta (${valorJugador}) es menor que la del crupier (${valorCrupier})`;
     }else if(prediccion === "baja" && valorJugador > valorCrupier){
         resultado = `¡Perdiste! Tu carta (${valorJugador}) es mayor que la del crupier (${valorCrupier})`;
+    }else{
+        resultado = `¡Perdiste! Tu carta (${valorJugador}) es igual que la del crupier (${valorCrupier})`;
     }
     mensajeResultado.innerText = resultado;
     modalResultado.style.display = "block";

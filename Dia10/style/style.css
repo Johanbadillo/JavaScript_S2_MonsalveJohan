@@ -15,7 +15,6 @@ body {
     background: url(./../media/fondo.jpg) no-repeat;
     background-size: cover;
     min-height: 100vh;
-    overflow: hidden;
     color: white;
     font-family: nueva;
 }
@@ -39,7 +38,7 @@ body {
 
 .contenido .tituloPrincipal p {
     font-size: 2.5rem;
-    width: 700px;
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
     font-weight: lighter;
@@ -86,7 +85,7 @@ body {
     flex-direction: column;
     margin-left: auto;
     margin-right: 150px;
-    top: 70px;
+    top: 3vw;
 }
 
 .contenido .perfil button {
