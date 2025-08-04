@@ -46,9 +46,9 @@ function inicio() {
             cartaJugador = data.cards[1];
             cartasOcultas = data.cards.slice(2, 6);
             cartaJugadorImg.src = cartaJugador.image;
-            cartaCrupierImg.src = './media/prueba.png';
+            cartaCrupierImg.src = './media/reverso.jpeg';
             for (let i = 0; i < cartasOcultas.length; i++) {
-                document.getElementById(`carta${i + 1}`).src = './media/prueba.png';
+                document.getElementById(`carta${i + 1}`).src = './media/prueba.jpeg';
             }
         });
     });

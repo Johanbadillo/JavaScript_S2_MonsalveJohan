@@ -40,8 +40,8 @@ function inicio() {
         llamar(`https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=2`, function (data) {
             cartaCrupier = data.cards[0];
             cartaJugador = data.cards[1];
-            cartaCrupierImg.src = './media/prueba.png';
-            cartaJugadorImg.src = './media/prueba.png';
+            cartaCrupierImg.src = './media/reverso.jpeg';
+            cartaJugadorImg.src = './media/prueba.jpeg';
         });
     });
 }
@@ -87,8 +87,8 @@ reinicio.addEventListener('click', () => {
     seleccion.style.display = 'flex';
     alta.disabled = false;
     baja.disabled = false;
-    cartaCrupierImg.src = './media/prueba.png';
-    cartaJugadorImg.src = './media/prueba.png';
+    cartaCrupierImg.src = './media/reverso.jpeg';
+    cartaJugadorImg.src = './media/prueba.jpeg';
     deckId = null;
     cartaJugador = null;
     cartaCrupier = null;
