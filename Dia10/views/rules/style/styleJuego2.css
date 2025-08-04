@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url(./../media/img1.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.contenido {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    width: 1200px;
+    margin: 50px auto 20px;
+    border: 2px solid white;
+    background-color: rgba(5, 5, 5, 0.555);
+    padding: 40px 20px;
+    border-radius: 16px;
+    box-shadow: 0 0 20px white, 0px 0px 20px 2px rgb(253, 253, 253) inset;
+}
+
+.contenido h1 {
+    font-size: 5rem;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+
+.contenido .regla {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.contenido .regla h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #e0e0e0;
+}
+
+.contenido .regla p {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.contenido ul,
+.contenido ol {
+    font-size: 1.8rem;
+    list-style-position: outside;
+    padding-left: 40px;
+    line-height: 1.6;
+}
+
+.contenido ul li,
+.contenido ol li {
+    margin-bottom: 10px;
+}
+
+.contenido ul ul,
+.contenido ol ul {
+    font-size: 1.6rem;
+    padding-left: 60px;
+    margin-top: 10px;
+}
+
+.contenido strong {
+    color: #ffffff;
+    font-weight: 900;
+}
+
+.regreso {
+    display: flex;
+    margin-right: auto;
+    padding: 0 20px;
+    justify-content: flex-end;
+    top: -100px;
+    position: relative;
+}
+
+button {
+    padding: 20px;
+    border: 2px solid #646464;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background-color: #444;
+    box-shadow: -5px 5px 5px #000000;
+    position: relative;
+    cursor: pointer;
+    transition: all 1.2s;
+}
+
+button:hover {
+    transform: scale(1.2);
+}
+
+button:active {
+    box-shadow: inset -4px 4px 0 #222;
+    font-size: 0.9rem;
+}
+
+@media (min-width: 480px) and (max-width: 1024px) {
+    body {
+        background: url(./../media/fondoCelRules.gif);
+        background-position: center;
+        background-size: cover;
+        transition: all 2s ease;
+    }
+
+    .contenido {
+        max-width: 85%;
+        margin: 40px auto 15px;
+        padding: 30px 20px;
+        border: 2px solid white;
+    }
+
+    .contenido h1 {
+        font-size: 4rem;
+        margin-bottom: 20px;
+    }
+
+    .contenido .regla h2 {
+        font-size: 2rem;
+    }
+
+    .contenido .regla p,
+    .contenido ul,
+    .contenido ol {
+        font-size: 1.6rem;
+        line-height: 1.4;
+    }
+
+    .contenido ul ul,
+    .contenido ol ul {
+        font-size: 1.4rem;
+        padding-left: 50px;
+    }
+
+    .regreso {
+        top: 10px;
+    }
+
+    button {
+        padding: 18px;
+        font-size: 0.95rem;
+    }
+
+    button:hover {
+        transform: scale(1.1);
+    }
+
+    button:active {
+        box-shadow: inset -3px 3px 0 #222;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background: url(./../media/fondoCelRules.gif);
+        background-position: center;
+        background-size: cover;
+        transition: all 2s ease;
+    }
+
+    .contenido {
+        max-width: 95%;
+        margin: 20px auto 10px;
+        padding: 15px 10px;
+        background: #00000076;
+    }
+
+    .contenido h1 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+
+    .contenido .regla h2 {
+        font-size: 1.8rem;
+    }
+
+    .contenido .regla p,
+    .contenido ul,
+    .contenido ol {
+        font-size: 1.2rem;
+        padding-left: 20px;
+    }
+
+    .contenido ul ul,
+    .contenido ol ul {
+        font-size: 1.1rem;
+        padding-left: 30px;
+    }
+
+    .regreso {
+        justify-content: center;
+        padding: 0 10px;
+        top: 0;
+        margin-bottom: 10px;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 0.8rem;
+    }
+}
