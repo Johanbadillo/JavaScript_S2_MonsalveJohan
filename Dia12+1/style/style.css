@@ -13,3 +13,22 @@ body {
 .buscador{
     text-align: center;
 }
+
+.resultado{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.card{
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 200px;
+}
+.card img{
+    width: 100%;
+    border-radius: 5px;
+}

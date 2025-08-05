@@ -11,20 +11,19 @@ function buscarpersonaje() {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 const data = JSON.parse(xhr.responseText);
                 console.log(data);
-                for (let i=0;  i < data.results.length; i++) {
+                for (let i = 0; i < data.results.length; i++) {
+                    division = document.getElementById("contenido")
                     console.log("adsfdasfd");
-                    contenido.innerHTML += `
+                    division.innerHTML += `
                     <div class="card">
-                    <img src="${data["results"][i]["image"][url]}" alt="">
-                    <h3>${data["results"][i]["name"]}</h3>
-                    <p><strong>powerstats:</strong>${data["results"][i]["powerstats"][intelligence]}</p>
-                    <p><strong>Species:</strong>${data["results"][i]["species"]}</p>
+                    <img src="${data["results"][i]["image"]["url"]}" alt="">
                     </div>
                     `
+                    console.log(data)
                 }
             }
         } catch {
-            alert("No Se a Encontrado El personaje")
+            console.log("No Se a Encontrado El personaje")
         }
     }
     xhr.send()
