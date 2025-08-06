@@ -2,6 +2,7 @@
 
 function buscarpersonaje() {
     const xhr = new XMLHttpRequest();
+    document.getElementById("contenido").innerHTML=``;
     const nombreUsar = document.getElementById("nombreInput").value.trim();
     const url = `https://www.superheroapi.com/api.php/ec6dbf94c6af92c02c23f6061649b68d//search/${nombreUsar}`
     console.log(url)
@@ -16,10 +17,14 @@ function buscarpersonaje() {
                     console.log("adsfdasfd");
                     division.innerHTML += `
                     <div class="card">
-                    <img src="${data["results"][i]["image"]["url"]}" alt="">
+                    <img src="${data["results"][i]["image"]["url"]}" alt="img">
+                    <h1>${data["results"][i]["name"]}</h1>
+                    <p>${data["results"][i]["id"]}</p>
+                    <p>${data["results"][i]["biography"]["full-name"]}</p>
+                    <p>${data["results"][i]["appearance"]["race"]}</p>
                     </div>
                     `
-                    console.log(data)
+                    console.log(data);
                 }
             }
         } catch {
@@ -31,7 +36,11 @@ function buscarpersonaje() {
 
 
 
-
+document.getElementById('nombreInput').addEventListener('keypress',(e) => {
+    if (e.key === 'Enter') {
+        buscarpersonaje();
+    }
+});
 
 
 
